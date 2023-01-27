@@ -1,2 +1,2 @@
-# hello-world
+# gym system management
 first project
