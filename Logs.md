@@ -1,0 +1,1 @@
+2023.2.5 The first meeting on Itreration 1, we decided on the division of labor within the group and decided that the first big user story would be the login system, the GUI framework was done by Zhige Xia  
