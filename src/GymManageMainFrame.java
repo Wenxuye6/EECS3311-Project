@@ -93,4 +93,33 @@ public class GymManageMainFrame {
 	
 		bamFrame.setLocationRelativeTo(null);
 	}
+	
+		private void () addListeners(){
+		mainPanel.getSelectAPanel().addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				layout.show(rightPanel, "A");
+			}
+		}
+							    
+		mainPanel.getBPanel().addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(username.equals("")) {
+					layout.show(rightPanel, "login");
+				}else {
+					layout.show(rightPanel, "B");
+				}
+				
+		}
+			
+		mainPanel.getCPanel().addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(username.equals("")) {
+					layout.show(rightPanel, "login");
+				}else {
+					layout.show(rightPanel, "C");
+				}
+				
+		}
+
+
 }
