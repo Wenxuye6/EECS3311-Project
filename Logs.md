@@ -1,1 +1,2 @@
-2023.2.4 The first meeting on Itreration 1, we decided on the division of labor within the group and decided that the first big user story would be the login system, the GUI framework was done by Zhige Xia  
+2023.2.4 The first meeting on Itreration 1, we decided on the division of labor within the group and decided that the first big user story would be the login system, the GUI framework was done by Zhige Xia 
+2023.2.5 The second meeting on Itr1, we change the first big user storey to the Course enrollment. 
