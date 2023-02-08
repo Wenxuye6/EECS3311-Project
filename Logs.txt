@@ -1,5 +1,3 @@
-2023.2.4 The first meeting on Itreration 1, we decided on the division of labor within the group and decided that the first big user story would be the login system, the GUI framework was done by Zhige Xia 
-
 2023.2.4 meeting time: 26 mins
 The first meeting for Itreration 1, the first big user story we decided to work on is the course enrollment At this iteration, we need a database, GUI for course enrollment user story, the GUI framework will be responsible by Zhige Xia
 the code for course enrollment, add course, remove course, review course description, show a list of course will be responsible by Haocheng, Wenxu, and Tao
