@@ -17,3 +17,6 @@ output: [name=aerobic, price=1000, desc=enhace cardio-pulmonary function] so the
 2023.2.7 We edit and revise several parts of Planning Document
          We write the basic code for class, membership, and inventory, and make sure the code is working by testing the methods  
          We defince some general methods(funcationality) applying in membership class and coah class
+2023.2.8 The first version of the interface model that can be used has been completed.
+         The interface includes the most basic GUI design, a title and two buttons, with the option of administrator login or user login
+         The Administrator login interface includes the most basic GUI design, two input boxes to enter the account password
