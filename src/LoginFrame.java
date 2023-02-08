@@ -69,10 +69,16 @@ public class LoginFrame extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				String word = "123456";	
 				String str = new String(password.getPassword());
+				String str1 = "correct password";
 				
-				if(str.equals(word))
-					System.out.println("password correct");
-//					new LendAdminFrame().show();
+				if(str.equals(word)){
+					String str1 = "correct password,Administrator interface not yet completed";
+					JOptionPane.showMessageDialog(null, str1);
+				}else{
+					String str2 = "uncorrect password";
+					JOptionPane.showMessageDialog(null, str2);
+					
+				}
 				else{
 					String str1 = "uncorrect password";
 					JOptionPane.showMessageDialog(null, str1);
