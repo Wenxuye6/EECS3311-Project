@@ -38,8 +38,8 @@ public class GymManageMainFrame extends JFrame {
 		jp1 = new JPanel();
 		jp2 = new JPanel();		
 
-		user = new JButton("Sing in as User");
-		admin = new JButton("Sing in as Manage");
+		user = new JButton("Log in as User");
+		admin = new JButton("Log in as Manage");
 
 		jp3 = new JPanel();
 		jp2.setLayout(new BorderLayout());
