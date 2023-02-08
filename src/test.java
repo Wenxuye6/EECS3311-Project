@@ -7,6 +7,9 @@ public class test {
 		course anaerobic = new course("anaerobic",1000,"promote explosive power");
 		course strength = new course("strength",1000,"promote strength");
 		
+		membership wenxu = new membership( "wenxu","male", 250	,-10,-100);
+		wenxu.showEverything();
+		
 		
 		aerobic.showEverything();		
 		System.out.print("a");
