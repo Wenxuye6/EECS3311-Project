@@ -1,4 +1,6 @@
 package membership;
+import java.util.ArrayList;
+import course.java;
 
 public class membership {
 
@@ -8,6 +10,7 @@ public class membership {
 	private int age;
 	private int remainFund;
 	private int bodyindex;
+	private ArrayList<course> courses;
 	
 	
 	public int getRemainFund() {
