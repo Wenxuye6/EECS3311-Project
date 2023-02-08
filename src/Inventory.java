@@ -104,7 +104,7 @@ public class Inventory {
 	
 
 
-//	private double yogamatPrice;
+
 //	
 //	
 
