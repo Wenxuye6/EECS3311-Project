@@ -2,37 +2,24 @@ package membership;
 
 import java.util.Scanner;
 
-public class membership extends bodyFatRate {
-
+public class membership extends membershipInfor {
 	
 	private String name;
 	private int answer;
 	private String gender;
 	private int age;
-	private int number;
 	private int addMoney;
 	private int remainFund=0;
 	private int bodyindex;
 	private int bodyFatRate;
+	private int weight;
+	private int height;
 	private String bodyFat;
 	private int price;
 	private int fund;
 	
-	
-	public int getRemainFund() {
-		return remainFund;
-	}
-	public void setRemainFund(int remainFund) {
-		this.remainFund = remainFund;
-	}
-	public int getBodyindex() {
-		return bodyindex;
-	}
-	public void setBodyindex(int bodyindex) {
-		this.bodyindex = bodyindex;
-	}
-	
 
+	
 	public membership(String name, String gender, int age, int remainFund, int bodyindex) {
 		this.name = name;
 		this.gender = gender;
@@ -41,11 +28,7 @@ public class membership extends bodyFatRate {
 		this.remainFund = remainFund;
 		this.bodyindex = bodyindex;
 		this.price=price;
-		
 	}
-	
-
-
 	
 //type the personal information;	
 	public void showInformation() {
@@ -59,7 +42,10 @@ public class membership extends bodyFatRate {
 	    age = myInput.nextInt();
 	    
 	    Scanner Input = new Scanner( System.in );
-	    System.out.print( "The remainFund for your account is"+ " = "+ remainFund +" ."+ "Do you want add more money? 1 for YES, 0 For NO");
+	    System.out.print( "The remainFund for your account is"+ " = "+ remainFund +""
+	    		+ " ."+ "Do you want add more money? 1 for YES, 0 For NO");
+	    
+	    
 	    answer = Input.nextInt();
 	    
 	    if (answer!=1&answer!=0) {
@@ -76,6 +62,7 @@ public class membership extends bodyFatRate {
 	    }
 	    }
 	}	
+	
 //check the remainFund for different age person;
 	public int fundCheck() {			
 			if(age<18){
@@ -95,27 +82,32 @@ public class membership extends bodyFatRate {
 	
 //show the bodyindex;
 	public String bodyCheck() {
-		Scanner body = new Scanner( System.in );
-	    System.out.print( "Enter your Body fat rate");
-	    bodyFatRate = body.nextInt();
+		Scanner H = new Scanner( System.in );
+	    System.out.print( "Enter your height (cm)");
+	    height = H.nextInt();
+	    
+		Scanner W = new Scanner( System.in );
+	    System.out.print( "Enter your weight (Kg)");
+	    weight = W.nextInt();
+
+	    bodyFatRate=weight/(height*height);
 
 	    if (bodyFatRate>50) {
 	    	bodyFat="notHealthy";
-	    }
-	    if (bodyFatRate<10) {
-	    	bodyFat="Healthy";
 	    }else {
-	    	bodyFat="justOk";
+	    		if (bodyFatRate<10) {
+	    				bodyFat="Healthy";
+	    			}else {
+	    				bodyFat="justOk";
+	    			}
 	    }
 	    return bodyFat;
 	}
-
 	
 // Show all the personal information
-	public void showEverything() {
+	public void showMemberCard() {
 		System.out.println( "membership [name=" + name + ", gender=" + gender + ", age=" + age + ", remainFund=" +  fundCheck() + ", bodyindex=" + bodyFat + "]");
 	}
 	
-	
-	
 }
+
