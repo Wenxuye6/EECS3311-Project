@@ -34,12 +34,20 @@ public class membership {
 		this.age = age;
 		this.remainFund = remainFund;
 		this.bodyindex = bodyindex;
+		this.courses = new ArrayList<course>();
 	}
+	
+	public void addcourse(String name, int price, String desc){
+		courses.add(new course(name, price, desc));
+	
+		
+	}	
 	
 	public void showEverything() {
 		System.out.println( "membership [name=" + name + ", gender=" + gender + ", age=" + age + ", remainFund=" + remainFund
 				+ ", bodyindex=" + bodyindex + "]");
 	}
+	
 	
 	
 	
