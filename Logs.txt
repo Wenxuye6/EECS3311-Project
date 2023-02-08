@@ -21,7 +21,7 @@ output: [name=aerobic, price=1000, desc=enhace cardio-pulmonary function] so the
          The interface includes the most basic GUI design, a title and two buttons, with the option of administrator login or user login
          The Administrator login interface includes the most basic GUI design, two input boxes to enter the account password
 2023.2.8  
-GymManageMainFrame.java first version took 2 hours 20 mins
+GymManageMainFrame.java first version took 2 hours 20 mins in 2023.2.6 and 2023.2.7
 LoginFrame.java first version took 1 hours 14 mins
 UserLoginFrame.java first version took 1 hours 31 mins
 MainFrame.java just be create
