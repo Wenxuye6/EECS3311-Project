@@ -20,3 +20,6 @@ output: [name=aerobic, price=1000, desc=enhace cardio-pulmonary function] so the
 2023.2.8 The first version of the interface model that can be used has been completed.
          The interface includes the most basic GUI design, a title and two buttons, with the option of administrator login or user login
          The Administrator login interface includes the most basic GUI design, two input boxes to enter the account password
+2023.2.8 
+Administrator login interface is temporarily set to account admin, password 123456, all other passwords will directly close the page, the administrator                 interface is not set yet.
+The user login interface is basically made with reference to the administrator login interface, set up registration, login and change password three buttons, registration and change passwordevent temporarily not designed, as not designed for registration, so the login temporarily not set up account, plan to use mysql database to connect data in the future, so the login temporary account only need to enter the password 123456 you can directly enter the system home page
