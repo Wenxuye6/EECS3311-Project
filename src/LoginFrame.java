@@ -21,10 +21,10 @@ public class LoginFrame extends JFrame{
 	
 	public LoginFrame(){
 		this.setBounds(400, 200, 900, 650);
-		this.setTitle("Gym Management System Login");
+		this.setTitle("Gym Management System Login in");
 		this.setLayout(new BorderLayout());
 		
-		label = new JLabel("Login",SwingConstants.CENTER);
+		label = new JLabel("Login in",SwingConstants.CENTER);
 		label.setFont(new Font("",Font.BOLD,30));
 		
 		name = new JLabel("Account");
