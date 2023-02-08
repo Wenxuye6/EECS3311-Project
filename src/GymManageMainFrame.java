@@ -83,6 +83,6 @@ public class GymManageMainFrame extends JFrame {
 	}
 	
 	public static void main(String[] args){
-		new MainFrame();
+		new GymManageMainFrame();
 	}
 }
