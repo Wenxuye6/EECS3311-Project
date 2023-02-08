@@ -1,4 +1,16 @@
 2023.2.4 The first meeting on Itreration 1, we decided on the division of labor within the group and decided that the first big user story would be the login system, the GUI framework was done by Zhige Xia 
-2023.2.5 The second meeting on Itr1, we change the first big user storey to the Course enrollment. 
+
+2023.2.4 meeting time: 26 mins
+The first meeting for Itreration 1, the first big user story we decided to work on is the course enrollment At this iteration, we need a database, GUI for course enrollment user story, the GUI framework will be responsible by Zhige Xia
+the code for course enrollment, add course, remove course, review course description, show a list of course will be responsible by Haocheng, Wenxu, and Tao
+
+2023.2.5 Code Design Time: 2 hours 16 mins
+We first of all create a random course list. At this stage, we want courses to be stored in one class with the attributes of course name, course price, course description Note: the attributes are set to be private since we don't want users to access each other's info
+create a No-arg constructer that sets the course's name and description as none, and sets the price as -1 which indicates for later creation of course object, we are able to know that whether the object is created successfully
+showEverything method is created for course class, which displays name, description and price
+Test class is created to test whether showEverything method is working
+course aerobic = new course("aerobic",1000,"enhace cardio-pulmonary function"); aerobic.showEverything();
+output: [name=aerobic, price=1000, desc=enhace cardio-pulmonary function] so the funtion work
+
 2023.2.6 First version of the GUI framework model trial run
 2023.2.7 We edit and revise several parts of Planning Document
