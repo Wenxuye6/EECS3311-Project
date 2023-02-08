@@ -102,11 +102,7 @@ public class Inventory {
 
 
 	
-//	private double legpressPrice;
-//	private double latpulldownbarPrice;
-//	private double ergometerPrice;
-//	private double chestpressPrice;
-//	private double hanginglegraisePrice;
+
 
 //	private double yogamatPrice;
 //	
