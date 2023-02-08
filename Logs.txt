@@ -16,3 +16,4 @@ output: [name=aerobic, price=1000, desc=enhace cardio-pulmonary function] so the
 2023.2.6 First version of the GUI framework model trial run
 2023.2.7 We edit and revise several parts of Planning Document
          We write the basic code for class, membership, and inventory, and make sure the code is working by testing the methods  
+         We defince some general methods(funcationality) applying in membership class and coah class
