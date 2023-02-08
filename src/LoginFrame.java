@@ -20,7 +20,7 @@ public class LoginFrame extends JFrame{
 	JPanel panel,jp1,jp2;
 	
 	public LoginFrame(){
-		this.setBounds(400, 200, 300, 200);
+		this.setBounds(400, 200, 900, 650);
 		this.setTitle("Gym Management System Login");
 		this.setLayout(new BorderLayout());
 		
