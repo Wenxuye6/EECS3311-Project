@@ -2,7 +2,7 @@ package membership;
 
 import java.util.Scanner;
 
-public class membership {
+public class membership extends bodyFatRate {
 
 	
 	private String name;
@@ -11,10 +11,10 @@ public class membership {
 	private int age;
 	private int number;
 	private int addMoney;
-
-
 	private int remainFund=0;
 	private int bodyindex;
+	private int bodyFatRate;
+	private String bodyFat;
 	private int price;
 	private int fund;
 	
@@ -34,7 +34,6 @@ public class membership {
 	
 
 	public membership(String name, String gender, int age, int remainFund, int bodyindex) {
-		
 		this.name = name;
 		this.gender = gender;
 		this.age = age;
@@ -60,25 +59,25 @@ public class membership {
 	    age = myInput.nextInt();
 	    
 	    Scanner Input = new Scanner( System.in );
-	    System.out.print( "The remainFund for your account is"+ remainFund + "Do you want add more money? 1 for YES, 0 For NO");
+	    System.out.print( "The remainFund for your account is"+ " = "+ remainFund +" ."+ "Do you want add more money? 1 for YES, 0 For NO");
 	    answer = Input.nextInt();
-	    if (answer==1) {
-	    	Scanner add = new Scanner( System.in );
-	    	System.out.println( "how much you want to add?" );
-		    addMoney = add.nextInt();
-		    remainFund=remainFund +addMoney;
-	    }
-	    if (answer==0) {
-	    	System.out.println( "loser" );
-	    }else {
+	    
+	    if (answer!=1&answer!=0) {
 	    	System.out.println( "Please follow the instruction!" );
+	    }else {	    
+	    	if (answer==1) {
+	    		Scanner add = new Scanner( System.in );
+	    		System.out.println( "how much you want to add?" );
+	    		addMoney = add.nextInt();
+	    		remainFund=remainFund +addMoney;
+	    	}
+	    	else  {
+	    		System.out.println( "loser" );
 	    }
-
-	}
-	
+	    }
+	}	
 //check the remainFund for different age person;
-	public int fundCheck() {
-			
+	public int fundCheck() {			
 			if(age<18){
 				price=25;
 			}
@@ -93,9 +92,28 @@ public class membership {
 		fund = remainFund-price;
 		return fund;
 		}
+	
+//show the bodyindex;
+	public String bodyCheck() {
+		Scanner body = new Scanner( System.in );
+	    System.out.print( "Enter your Body fat rate");
+	    bodyFatRate = body.nextInt();
 
+	    if (bodyFatRate>50) {
+	    	bodyFat="notHealthy";
+	    }
+	    if (bodyFatRate<10) {
+	    	bodyFat="Healthy";
+	    }else {
+	    	bodyFat="justOk";
+	    }
+	    return bodyFat;
+	}
+
+	
+// Show all the personal information
 	public void showEverything() {
-		System.out.println( "membership [name=" + name + ", gender=" + gender + ", age=" + age + ", remainFund=" +  fundCheck() + ", bodyindex=" + bodyindex + "]");
+		System.out.println( "membership [name=" + name + ", gender=" + gender + ", age=" + age + ", remainFund=" +  fundCheck() + ", bodyindex=" + bodyFat + "]");
 	}
 	
 	
