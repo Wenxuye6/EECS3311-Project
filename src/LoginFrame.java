@@ -79,11 +79,7 @@ public class LoginFrame extends JFrame{
 					JOptionPane.showMessageDialog(null, str2);
 					
 				}
-				else{
-					String str1 = "uncorrect password";
-					JOptionPane.showMessageDialog(null, str1);
-					
-				}
+
 				LoginFrame.this.dispose();
 			}
 
