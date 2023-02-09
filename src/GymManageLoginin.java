@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
 
-public class GymManageMainFrame extends JFrame {
+public class GymManageLoginin extends JFrame {
 	JLabel labeltile;
 	JLabel info;
 	JPanel jpanel;
@@ -26,7 +26,7 @@ public class GymManageMainFrame extends JFrame {
 	DefaultTableModel tableModel;
 	
     
-	public GymManageMainFrame(){
+	public GymManageLoginin(){
 		
 		this.setLayout(new BorderLayout());
 		this.setBounds(400, 200, 900, 650);
