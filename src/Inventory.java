@@ -55,6 +55,10 @@ public class Inventory {
 		
 	}
 	
+	public void showAll() {
+		System.out.println("\n"+dumbbell_list.toString()+ yogaMat_list.toString());
+	}
+	
 }
 
 
