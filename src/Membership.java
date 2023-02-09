@@ -106,7 +106,8 @@ public class membership extends membershipInfor {
 	
 // Show all the personal information
 	public void showMemberCard() {
-		System.out.println( "membership [name=" + name + ", gender=" + gender + ", age=" + age + ", remainFund=" +  fundCheck() + ", bodyindex=" + bodyFat + "]");
+		System.out.println( "Membership [name=" + name + ", gender=" + gender + ", age=" + age+", " +"weight="+weight +", "+"height="+" "+height +"]");
+		System.out.println("Personal information [remainFund=" + fundCheck()+" "+ "bodyindex = "+ bodyFat+"]");
 	}
 	
 }
