@@ -21,10 +21,10 @@ public class LoginFrame extends JFrame{
 	
 	public LoginFrame(){
 		this.setBounds(400, 200, 900, 650);
-		this.setTitle("Gym Management System Login");
+		this.setTitle("Gym Management System Login in");
 		this.setLayout(new BorderLayout());
 		
-		label = new JLabel("Login",SwingConstants.CENTER);
+		label = new JLabel("Login in",SwingConstants.CENTER);
 		label.setFont(new Font("",Font.BOLD,30));
 		
 		name = new JLabel("Account");
@@ -69,15 +69,17 @@ public class LoginFrame extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				String word = "123456";	
 				String str = new String(password.getPassword());
+				String str1 = "correct password";
 				
-				if(str.equals(word))
-					System.out.println("password correct");
-//					new LendAdminFrame().show();
-				else{
-					String str1 = "uncorrect password";
+				if(str.equals(word)){
+					String str1 = "correct password,Administrator interface not yet completed";
 					JOptionPane.showMessageDialog(null, str1);
+				}else{
+					String str2 = "uncorrect password";
+					JOptionPane.showMessageDialog(null, str2);
 					
 				}
+
 				LoginFrame.this.dispose();
 			}
 

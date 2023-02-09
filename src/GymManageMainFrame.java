@@ -16,9 +16,11 @@ public class GymManageMainFrame extends JFrame {
 	JLabel labeltile;
 	JLabel info;
 	JPanel jpanel;
-	JPanel jp1;
-	JPanel User,jp2,jp3;
-	JButton admin,user;
+	JPanel jpinfo;
+	JPanel jp2;
+	JPanel jp3;
+	JButton admin;
+	JButton user;
 
 	JButton lend;
 	DefaultTableModel tableModel;
@@ -32,14 +34,16 @@ public class GymManageMainFrame extends JFrame {
 
         	labeltile = new JLabel("GymManageSystem",SwingConstants.CENTER);
 		labeltile.setFont(new Font("",Font.BOLD,40));		 
+		info = new JLabel("EECS-3311 Project Group2, made by Haocheng Sun, Tao Chen, Wenxu Ye, Zhige Xia, This is a simple version, ONLY for Iteration 1");
 		
 		jpanel = new JPanel();
 		jpanel.setLayout(new BorderLayout());
+		jpinfo = new JPanel();
 		jp1 = new JPanel();
 		jp2 = new JPanel();		
 
-		user = new JButton("Sing in as User");
-		admin = new JButton("Sing in as Manage");
+		user = new JButton("Log in as User");
+		admin = new JButton("Log in as Manage");
 
 		jp3 = new JPanel();
 		jp2.setLayout(new BorderLayout());
@@ -48,7 +52,8 @@ public class GymManageMainFrame extends JFrame {
 		jp3.add(admin);
 		jp2.add(jp3,BorderLayout.SOUTH);
 		
-		jpanel.add(jp1,BorderLayout.NORTH);
+		jpinfo.add(info);
+		jpanel.add(jpinfo,BorderLayout.NORTH);
 		jpanel.add(jp2);
 		
 		
