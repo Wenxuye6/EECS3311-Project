@@ -29,7 +29,9 @@ MainFrame.java just be create
 Administrator login interface is temporarily set to account admin, password 123456, all other passwords will directly close the page, the administrator interface is not set yet.
 The user login interface is basically made with reference to the administrator login interface, set up registration, login and change password three buttons, registration and change passwordevent temporarily not designed, as not designed for registration, so the login temporarily not set up account, plan to use mysql database to connect data in the future, so the login temporary account only need to enter the password 123456 you can directly enter the system home page
 
-write code of membership, more details about implementation. show the Member's Physical Quality, and information. The user can type their name and body fat rate, then the card can show everything about the user. Also, check the remaining funds, user can either add money or use the fund. This system took 3h.
+Write code of membership, more details about implementation. show the Member's Physical Quality, and information. The user can type their name and body fat rate, then the card can show everything about the user. Also, check the remaining funds, user can either add money or use the fund. This system took 3h.Upload the planning document, adding another two big stories index. 
+Add a test class of membership.
+
 We test the inventory class and membership class
 
 planning document with all the user stories are revised and uploaded.
