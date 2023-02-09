@@ -1,25 +1,29 @@
 package membership;
-
 import java.util.Scanner;
 
-public class membership extends membershipInfor {
+/*This class requair user to type personal imformation(eg.name, gender...), calculate the body fat rate by considering person's weight and height. 
+print the membership card with basic imfromation; */
+
+public class membership {	
+// declare and initialize twelve variables;
+	public String name;
+	public String gender;
+	public String bodyFat;
+	public int answer;
+	public int age;
+	public int addMoney;
+	public int bodyindex;
+	public int bodyFatRate;
+	public int weight;
+	public int height;
+	public int price;
+	public int fund;
 	
-	private String name;
-	private int answer;
-	private String gender;
-	private int age;
-	private int addMoney;
-	private int remainFund=0;
-	private int bodyindex;
-	private int bodyFatRate;
-	private int weight;
-	private int height;
-	private String bodyFat;
-	private int price;
-	private int fund;
+//declare and initialize remaining fund for membership account;
+	public int remainFund=0;
 	
 
-	
+//Constructor
 	public membership(String name, String gender, int age, int remainFund, int bodyindex) {
 		this.name = name;
 		this.gender = gender;
@@ -30,7 +34,7 @@ public class membership extends membershipInfor {
 		this.price=price;
 	}
 	
-//type the personal information;	
+//This method require user to type the personal information and choose whether to add money to account;
 	public void showInformation() {
 		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 	    System.out.println("Enter username");
@@ -42,12 +46,8 @@ public class membership extends membershipInfor {
 	    age = myInput.nextInt();
 	    
 	    Scanner Input = new Scanner( System.in );
-	    System.out.print( "The remainFund for your account is"+ " = "+ remainFund +""
-	    		+ " ."+ "Do you want add more money? 1 for YES, 0 For NO");
-	    
-	    
+	    System.out.print( "The remainFund for your account is"+ " = "+ remainFund + " " + " ."+ "Do you want add more money? 1 for YES, 0 For NO");
 	    answer = Input.nextInt();
-	    
 	    if (answer!=1&answer!=0) {
 	    	System.out.println( "Please follow the instruction!" );
 	    }else {	    
@@ -63,7 +63,7 @@ public class membership extends membershipInfor {
 	    }
 	}	
 	
-//check the remainFund for different age person;
+//Check which level payment base on the age, deduct money from account
 	public int fundCheck() {			
 			if(age<18){
 				price=25;
@@ -89,10 +89,11 @@ public class membership extends membershipInfor {
 		Scanner W = new Scanner( System.in );
 	    System.out.print( "Enter your weight (Kg)");
 	    weight = W.nextInt();
+	    height=height/100;
 
 	    bodyFatRate=weight/(height*height);
 
-	    if (bodyFatRate>50) {
+	    if (bodyFatRate>50) {	
 	    	bodyFat="notHealthy";
 	    }else {
 	    		if (bodyFatRate<10) {
