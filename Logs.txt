@@ -34,7 +34,10 @@ Add a test class of membership.
 
 We test the inventory class and membership class
 
+2023.2.9 
 planning document with all the user stories are revised and uploaded.
 Complete the UML of inventory class and membership class
 
 The planning document is finalized, the implemented storeis are mentioned at the back
+
+Architecture sketch is completed and uploaded by using MVC.
