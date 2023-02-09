@@ -41,3 +41,5 @@ Complete the UML of inventory class and membership class
 The planning document is finalized, the implemented storeis are mentioned at the back
 
 Architecture sketch is completed and uploaded by using MVC.
+
+Write comment for membership class, explain the functions of every methods 
