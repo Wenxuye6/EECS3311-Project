@@ -42,4 +42,4 @@ The planning document is finalized, the implemented storeis are mentioned at the
 
 Architecture sketch is completed and uploaded by using MVC.
 
-Write comment for membership class, explain the functions of every methods 
+Write comment for membership class, explain the functions of every methods, add wiki file.
