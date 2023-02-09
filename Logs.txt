@@ -21,7 +21,7 @@ actual code design time: 1hr
 
 2023.2.7 We edit and revise several parts of Planning Document
          We write the basic code for class, membership, and inventory, and make sure the code is working by testing the methods  
-         We defince some general methods(funcationality) applying in membership class and coah class
+         We defince some general methods(funcationality) applying in membership class and coach class
          
 2023.2.8 The first version of the interface model that can be used has been completed by Zhige Xia
          The interface includes the most basic GUI design, a title and two buttons, with the option of administrator login or user login
