@@ -1,4 +1,4 @@
-NOTE: We initially wor
+NOTE: We initially construct the code in our independent laptop without uploading it on GitHub. Since this is our first time using GitHub, we accidentally made the editions on fork instead of main. That's why all the commits seem concentrated in the last week.
 
 2023.2.4 meeting time: 26 mins
 The first meeting for Itreration 1, the first big user story we decided to work on is the course enrollment At this iteration, we need a database, GUI for course enrollment user story, the GUI framework will be responsible by Zhige Xia
@@ -27,5 +27,5 @@ UserLoginFrame.java first version took 1 hours 31 mins
 MainFrame.java just be create
 Administrator login interface is temporarily set to account admin, password 123456, all other passwords will directly close the page, the administrator interface is not set yet.
 The user login interface is basically made with reference to the administrator login interface, set up registration, login and change password three buttons, registration and change passwordevent temporarily not designed, as not designed for registration, so the login temporarily not set up account, plan to use mysql database to connect data in the future, so the login temporary account only need to enter the password 123456 you can directly enter the system home page
-2023.2.8. writh code of membership, more details about implementation. show the Member's Physical Quality, and information. The user can type their name and body fat rate, then the card can show everything about the user. Also, check the remaining funds, user can either add money or use the fund. This system took 3h.
+2023.2.8. write code of membership, more details about implementation. show the Member's Physical Quality, and information. The user can type their name and body fat rate, then the card can show everything about the user. Also, check the remaining funds, user can either add money or use the fund. This system took 3h.
 We test the inventory class and membership class
