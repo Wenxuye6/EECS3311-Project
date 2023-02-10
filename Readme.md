@@ -1,7 +1,7 @@
 # Gym Management System
 For EECS3311 Project  
 
-This instructions for using the program
+This is the instructions for using the program
 
 You need have jre and mysql on your PC First.
 Then you need to download gym.sql and run it in mysql to create the database.Use GymManagementSystem.exe to access our system.
