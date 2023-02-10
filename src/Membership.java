@@ -58,7 +58,7 @@ public class membership {
 	    		remainFund=remainFund +addMoney;
 	    	}
 	    	else  {
-	    		System.out.println( "loser" );
+	    		System.out.println( "check your account" );
 	    }
 	    }
 	}	
