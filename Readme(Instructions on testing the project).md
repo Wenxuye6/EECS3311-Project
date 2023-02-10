@@ -1,5 +1,5 @@
 # Gym Management System
-For EECS3311 Project  This instructions for using the program, in a simplified version
+For EECS3311 Project  This instructions for using the program
 
 Before using this program you need to download gym.sql and run it in mysql to create the database.Then use GymManagementSystem.exe to access our system.
 We have set up an Admin account with a password of 123456, please use log in as Manage.
