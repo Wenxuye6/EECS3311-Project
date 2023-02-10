@@ -83,7 +83,7 @@ public class LoginFrame extends KeyFrame {
             new GymManageMainFrame(name).setVisible(true);
             dispose();
         } else {
-            JOptionPane.showMessageDialog(null, "uncorrect password", "错误", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "uncorrect password", "WRONG", JOptionPane.ERROR_MESSAGE);
             //Reset text box
             reset.doClick();
         }
