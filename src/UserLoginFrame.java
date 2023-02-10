@@ -2,11 +2,6 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -97,7 +92,7 @@ public class UserLoginFrame extends JFrame{
 			String str = new String(password.getPassword());
 				
 			if(str.equals(word)){
-				new MainFrame().show();
+				new GymManageMainFrame();
 			}else{
 				String str2 = "uncorrect password";
 				JOptionPane.showMessageDialog(null, str2);

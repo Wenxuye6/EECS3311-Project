@@ -72,8 +72,7 @@ public class LoginFrame extends JFrame{
 				String str1 = "correct password";
 				
 				if(str.equals(word)){
-					String str1 = "correct password,Administrator interface not yet completed";
-					JOptionPane.showMessageDialog(null, str1);
+					new GymManageMainFrame();
 				}else{
 					String str2 = "uncorrect password";
 					JOptionPane.showMessageDialog(null, str2);
