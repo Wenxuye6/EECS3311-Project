@@ -140,6 +140,7 @@ public class member extends JFrame {
 					
 					ResultSet rs = stmt.executeQuery(sql);
 					JOptionPane.showMessageDialog(null, "New Gym member added");
+					con.close();
 				}catch (Exception e) {
 					System.out.print(e);
 				}
