@@ -55,3 +55,13 @@ The planning document is finalized, the implemented storeis are mentioned at the
 Architecture sketch is completed and uploaded by using MVC.
 
 Write comment for membership class, explain the functions of every methods, add wiki file.
+
+2023.2.16
+Meet up with team 1 as their client team 
+supposed to meet at 6pm (team 1 show up at 6:10)
+Participant: 
+Team 1: Zohair Ahmed, Ammad Qureshi, Nicholas Lachhman
+Team 2 (our team): Haocheng Sun, Tao Chen, Wenxu Ye
+
+meeting minute:
+
