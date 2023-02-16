@@ -59,9 +59,18 @@ Write comment for membership class, explain the functions of every methods, add 
 2023.2.16
 Meet up with team 1 as their client team 
 supposed to meet at 6pm (team 1 show up at 6:10)
-Participant: 
+
+Participants: 
 Team 1: Zohair Ahmed, Ammad Qureshi, Nicholas Lachhman
 Team 2 (our team): Haocheng Sun, Tao Chen, Wenxu Ye
 
-meeting minute:
+meeting duration: 32mins
+
+Meeting summary:
+Team 1 is doing a book searching software where users can search a book, download a book and create a book club where other users can join.
+
+Team 2 gives 3 suggestions in total.
+The first one is to create a new user story for adding a book. To be specific, the user can add a book into the database. In this way, every user can also be a distributer.
+Second suggestion is searching for clubs by features of this club.
+Third suggestion is adding favorite books in the profile. When searching another user, the user's favorites should be shown. 
 
