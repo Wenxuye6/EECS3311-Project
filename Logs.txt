@@ -74,3 +74,14 @@ The first one is to create a new user story for adding a book. To be specific, t
 Second suggestion is searching for clubs by features of this club.
 Third suggestion is adding favorite books in the profile. When searching another user, the user's favorites should be shown. 
 
+
+2023.2.21
+Meeting summary with Team3:
+1. Modify staff
+It seems like your user stories mention coaches, managers, and members, but don't mention anything about other kinds of staff. These would be people at the gym like front desk receptionists, janitorial staff, IT etc.
+2. Cancel Membership
+We noticed that your modifications for memberships didn't include canceling a membership. A lot of gyms require contracts so there's a cancelation policy. So there might be a cancelation window or cancelation fee.
+3. Different types of memberships
+Some gyms allow for different payment plans, such as single day passes, pay per visit, weekly/monthly/yearly payments
+Those are the ideas we have so far. If none of those work we can come up with some more or modify them to work better for you
+
