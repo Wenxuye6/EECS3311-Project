@@ -85,3 +85,10 @@ We noticed that your modifications for memberships didn't include canceling a me
 Some gyms allow for different payment plans, such as single day passes, pay per visit, weekly/monthly/yearly payments
 Those are the ideas we have so far. If none of those work we can come up with some more or modify them to work better for you
 
+2023.3.1 
+Temporary plan:
+Zhige Xia: responsible for implementation of database and UI
+Haocheng: Update the planning document and update the structure graphs.
+Wenxu: assisting the coding of inner component of the software
+Tao Chen:  assisting the coding of inner component of the software
+Sami: work on the Wiki and testing
