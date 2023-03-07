@@ -123,7 +123,7 @@ testing
 	and automated
 
 Based on the meeting with the client team, we made the following changes to our big user stories:
-	1.Added a new big story called "Staff Management," which includes three small stories: "Add Staff," "Remove Staff," and "Display Staff Schedule."
+	1.Added a new big story called "Staff Management," which includes three small stories: "Add Staff," "Remove Staff","imformation of Staff", and "Display Staff Schedule."
 	2.Rivise the violation of the small story of "Rigister new Membership" in big story "Modify Membership"
 	2.Added a small story called "Cancellation of Membership" to the big story "Modify Membership."
 	3.Added a series of types of membership, such as daily pass, monthly pass, and season pass.
