@@ -92,3 +92,32 @@ Haocheng: Update the planning document and update the structure graphs.
 Wenxu: assisting the coding of inner component of the software
 Tao Chen:  assisting the coding of inner component of the software
 Sami: work on the Wiki and testing
+
+2023.3.7 
+continue the work and specify the work in details:
+
+update planning document
+
+ 	priority
+ 	specify which one is new (at least one
+	which one is implemented in itr 2
+	which one is revised
+	do the ones have the most priority better do the new one since they want the new one to be high priority
+
+implementation	
+
+	new user story mentioned by the client team
+	new user stories (does not specify how much though
+	note: code should have comment 
+
+documentation:
+
+	wiki update
+	copies of new or revised big user stories and detailed user stories 
+	discuss the violation of the previous plan
+	planned cost and actual cost
+
+testing
+
+	Junit test multiple tests at least
+	and automated
