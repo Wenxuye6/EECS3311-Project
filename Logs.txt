@@ -128,7 +128,7 @@ Based on the meeting with the client team, we made the following changes to our 
 	2.Added a small story called "Cancellation of Membership" to the big story "Modify Membership."
 	3.Added a series of types of membership, such as daily pass, monthly pass, and season pass.
 	
-Creating a new Word document that include:
+Creating a new Word document (temporary version) that include:
 	1.Showing the priorities for all of the existing big stories.
 	2.Showing the planned cost and the actual cost for each detailed story and developer task.
 
