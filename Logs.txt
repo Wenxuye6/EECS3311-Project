@@ -141,6 +141,7 @@ Creating a new Word document (temporary version) that include:
 	5.Revised architecture diagram
 	6.Revised the small story registration of the membership(delete the removing funtion from membership registration)
 	7.Add new small stroy "Delete Current Membership" below the big stroy "Modify Membership"
+	8.Revise Big Story2 "Modify Coach or Membership as a Manager"
 <Actual Cost: 3h/56min>
 
 
