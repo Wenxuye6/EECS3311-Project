@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 public class AddMemberFrame extends MinorFrame {
 
     private JTextField jtf11, jtf12, jtf13, jtf14, jtf15, jtf16, jtf17, pass2;
-    private JRadioButton jrb1;
+    private JRadioButton jrb1, jrb2;
     private JComboBox<String> jcb;
     private final MemberDAO memberDAO = new MemberDAOImpl();
 
@@ -36,7 +36,7 @@ public class AddMemberFrame extends MinorFrame {
         Label jl16 = new Label("weight:");
         Label jl17 = new Label("BMI:");
         Label jl18 = new Label("Fund:");
-        Label jl19 = new Label("VIP:");
+        Label jl19 = new Label("identity:");
         Label pass1 = new Label("pass:");
         jtf11 = new JTextField(); //ID
         jtf11.setEnabled(false);
@@ -48,11 +48,11 @@ public class AddMemberFrame extends MinorFrame {
         jtf17 = new JTextField(); //Fund
         pass2 = new JTextField(); //pass
         jrb1 = new JRadioButton("male");
-        JRadioButton jrb2 = new JRadioButton("female");
+        jrb2 = new JRadioButton("female");
         ButtonGroup bg = new ButtonGroup(); //gender
         bg.add(jrb1);
         bg.add(jrb2);
-        jcb = new JComboBox<>(); //VIP
+        jcb = new JComboBox<>(); //identity
         jl11.setBounds(20, 30, 40, 30);
         jl12.setBounds(180, 30, 60, 30);
         jl13.setBounds(400, 30, 60, 30);
@@ -77,7 +77,7 @@ public class AddMemberFrame extends MinorFrame {
         reset.setBounds(650, 102, 120, 40);
         addMember.setBounds(650, 172, 120, 40);
 
-        fillVIP();
+        fillJcb();
 
         jPanel.add(jl11);
         jPanel.add(jl12);
@@ -117,26 +117,35 @@ public class AddMemberFrame extends MinorFrame {
         String BMI = jtf16.getText().trim();
         String Fund = jtf17.getText().trim();
         String pass = pass2.getText().trim();
-        String vip = (String) jcb.getSelectedItem();
-        String gender = "female";
+        String identity = (String) jcb.getSelectedItem();
+        String gender = "";
         if(jrb1.isSelected()) {
             gender = "male";
+        } else if(jrb2.isSelected()) {
+            gender = "female";
         }
-        if ("".equals(account) || "".equals(realName) || "".equals(pass) ||"".equals(height) || "".equals(weight) || "".equals(BMI) || "".equals(Fund) || "Please Select……".equals(vip)) {
+        if ("".equals(account) || "".equals(realName) || "".equals(pass) ||"".equals(height) || "".equals(weight) || "".equals(BMI) || "".equals(Fund) ||"".equals(gender) || "Please Select……".equals(identity)) {
             JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        Member member = new Member(0, account, pass, realName, gender, Double.parseDouble(height), Double.parseDouble(weight), Double.parseDouble(BMI), Double.parseDouble(Fund), vip);
+
+        int isFlag = JOptionPane.showConfirmDialog(null, "Please confirm");
+        if (isFlag > 0) {
+            return;
+        }
+
+        Member member = new Member(0, account, pass, realName, gender, Double.parseDouble(height), Double.parseDouble(weight), Double.parseDouble(BMI), Double.parseDouble(Fund), identity);
         boolean success = memberDAO.addMember(member);
         if(success) {
-            JOptionPane.showMessageDialog(null, "success!");
+            JOptionPane.showMessageDialog(null, "Successfully added!");
         } else {
             JOptionPane.showMessageDialog(null, "account exists!", "warning", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     private void resetAction(ActionEvent e) {
-        jrb1.setEnabled(true);
+        jrb1.setSelected(false);
+        jrb2.setSelected(false);
         pass2.setText("");
         jtf11.setText("");
         jtf12.setText("");
@@ -149,9 +158,11 @@ public class AddMemberFrame extends MinorFrame {
     }
 
     //Drop down menu
-    private void fillVIP() {
+    private void fillJcb() {
         jcb.addItem("Please Select……");
-        jcb.addItem("VIP");
-        jcb.addItem("Non-VIP");
+        jcb.addItem("membership");
+        jcb.addItem("coach");
+        jcb.addItem("front desk");
+        jcb.addItem("janitorial");
     }
 }
