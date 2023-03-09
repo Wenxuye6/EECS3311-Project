@@ -4,16 +4,16 @@ package bean;
  * User entity classes
  */
 public class Member {
-    private int id;
+    private Integer memberId;
     private String account; //User account
-    private String password; //User Password
+    private String password; //User password
     private String realName;
     private String gender;
-    private double height;
-    private double weight;
-    private double BMI;
-    private double Fund;
-    private String VIP;
+    private Double height;
+    private Double weight;
+    private Double BMI;
+    private Double Fund;
+    private String identity;
 
     public Member() {
     }
@@ -23,8 +23,8 @@ public class Member {
         this.password = password;
     }
 
-    public Member(int id, String account, String password, String realName, String gender, double height, double weight, double BMI, double Fund, String VIP) {
-        this.id = id;
+    public Member(Integer memberId, String account, String password, String realName, String gender, Double height, Double weight, Double BMI, Double fund, String identity) {
+        this.memberId = memberId;
         this.account = account;
         this.password = password;
         this.realName = realName;
@@ -32,16 +32,16 @@ public class Member {
         this.height = height;
         this.weight = weight;
         this.BMI = BMI;
-        this.Fund = Fund;
-        this.VIP = VIP;
+        Fund = fund;
+        this.identity = identity;
     }
 
-    public int getId() {
-        return id;
+    public Integer getMemberId() {
+        return memberId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setMemberId(Integer memberId) {
+        this.memberId = memberId;
     }
 
     public String getAccount() {
@@ -76,43 +76,59 @@ public class Member {
         this.gender = gender;
     }
 
-    public double getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public double getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 
-    public double getBMI() {
+    public Double getBMI() {
         return BMI;
     }
 
-    public void setBMI(double BMI) {
+    public void setBMI(Double BMI) {
         this.BMI = BMI;
     }
 
-    public double getFund() {
+    public Double getFund() {
         return Fund;
     }
 
-    public void setFund(double fund) {
-        this.Fund = fund;
+    public void setFund(Double fund) {
+        Fund = fund;
     }
 
-    public String getVIP() {
-        return VIP;
+    public String getIdentity() {
+        return identity;
     }
 
-    public void setVIP(String VIP) {
-        this.VIP = VIP;
+    public void setIdentity(String identity) {
+        this.identity = identity;
+    }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "memberId=" + memberId +
+                ", account='" + account + '\'' +
+                ", password='" + password + '\'' +
+                ", realName='" + realName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", BMI=" + BMI +
+                ", Fund=" + Fund +
+                ", identity='" + identity + '\'' +
+                '}';
     }
 }
