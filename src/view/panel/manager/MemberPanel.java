@@ -201,7 +201,7 @@ public class MemberPanel extends JPanel {
 
         memberDAO.deleteMemberById((int) table.getValueAt(row, 0));
         tdm.removeRow(row);
-        resetValue(); //清空文本框
+        resetValue(); //Clear text box
         jtf13.setEnabled(false);
         jtf14.setEnabled(false);
         jtf15.setEnabled(false);
