@@ -139,7 +139,9 @@ Creating a new Word document (temporary version) that include:
 	3.Create new big user story "Log in"
 	4.Add two small stories: "Log in as User" and "Log in as admin"
 	5.Revised architecture diagram
-<Actual Cost: 2h/36min>
+	6.Revised the small story registration of the membership(delete the removing funtion from membership registration)
+	7.Add new small stroy "Delete Current Membership" below the big stroy "Modify Membership"
+<Actual Cost: 3h/56min>
 
 
 
