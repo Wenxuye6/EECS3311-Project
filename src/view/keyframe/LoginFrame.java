@@ -54,9 +54,9 @@ public class LoginFrame extends KeyFrame {
         adminName.setBounds(320, 233, 330, 30);
         password.setBounds(320, 333, 330, 30);
 
-        login.setBounds(750,420, 90,45);
-        reset.setBounds(750,470, 90,45);
-        back.setBounds(750,520, 90,45);
+        login.setBounds(750, 420, 90, 45);
+        reset.setBounds(750, 470, 90, 45);
+        back.setBounds(750, 520, 90, 45);
 
         jpanel.add(name);
         jpanel.add(pass);
@@ -83,7 +83,7 @@ public class LoginFrame extends KeyFrame {
             new GymManageMainFrame(name).setVisible(true);
             dispose();
         } else {
-            JOptionPane.showMessageDialog(null, "uncorrect password", "WRONG", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "uncorrect password", "error", JOptionPane.ERROR_MESSAGE);
             //Reset text box
             reset.doClick();
         }
