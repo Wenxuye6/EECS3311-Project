@@ -96,7 +96,7 @@ Sami: work on the Wiki and testing
 2023.3.7 
 continue the work and specify the work in details:
 
-update planning document
+update planning document <Planned Cost: 1h>
 
  	priority
  	specify which one is new (at least one
@@ -104,26 +104,26 @@ update planning document
 	which one is revised
 	do the ones have the most priority better do the new one since they want the new one to be high priority
 
-implementation	
+implementation <Planned Cost: 3h>	
 
 	new user story mentioned by the client team
 	new user stories (does not specify how much though
 	note: code should have comment 
 
-documentation:
+documentation <Planned Cost: 2h>:
 
 	wiki update
 	copies of new or revised big user stories and detailed user stories 
 	discuss the violation of the previous plan
 	planned cost and actual cost
 
-testing
+testing <Planned Cost: 1h>
 
 	Junit test multiple tests at least
 	and automated
-
+<2023.3.7 Update the Planning Document Actual Cost: 3h/47mins>
 Based on the meeting with the client team, we made the following changes to our big user stories:
-	1.Added a new big story called "Gym Staff Management," which includes three small stories: "Add Staff," "Remove Staff","imformation of Staff", and "Display Staff Schedule."
+	1.Added a new big story called "Staff Management," which includes three small stories: "Add Staff," "Remove Staff","imformation of Staff", and "Display Staff Schedule."
 	2.Rivise the violation of the small story of "Rigister new Membership" in big story "Modify Membership"
 	2.Added a small story called "Cancellation of Membership" to the big story "Modify Membership."
 	3.Added a series of types of membership, such as daily pass, monthly pass, and season pass.
@@ -131,4 +131,15 @@ Based on the meeting with the client team, we made the following changes to our 
 Creating a new Word document (temporary version) that include:
 	1.Showing the priorities for all of the existing big stories.
 	2.Showing the planned cost and the actual cost for each detailed story and developer task.
+
+2023.3.8 
+<Planned Cost: 3h>   
+	1.Create new big user stroy "Gym Staff Registration"  
+	2.Add three small stroies: "Rigister New Staff" , "View Staffs' Schedule" and "View Staffs' title" below the big user stroy "Gym Staff Registration"
+	3.Create new big user story "Log in"
+	4.Add two small stories: "Log in as User" and "Log in as admin"
+	5.Revised architecture diagram
+<Actual Cost: 2h/36min>
+
+
 
