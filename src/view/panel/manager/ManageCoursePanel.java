@@ -159,7 +159,7 @@ public class ManageCoursePanel extends JPanel {
 
         courseDAO.deleteCourseById((int) table.getValueAt(row, 0));
         tdm.removeRow(row);
-        resetValue(); //清空文本框
+        resetValue(); //Clear text box
         jtf2.setEnabled(false);
         jtf3.setEnabled(false);
         jta.setEnabled(false);
