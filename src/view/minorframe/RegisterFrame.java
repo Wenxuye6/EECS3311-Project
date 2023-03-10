@@ -12,7 +12,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 /**
- * User registration interface
+ * User registration interface, this class extends from MinorFrame and user should be able to use this class to rigister for being a member.
  */
 public class RegisterFrame extends MinorFrame {
 
