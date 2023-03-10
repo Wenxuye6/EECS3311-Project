@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Member operation page
+ * Member operation page, this frame extends from the KeyFrame and should be able to choose operation as member 
  */
 public class MemberMainFrame extends KeyFrame {
 
