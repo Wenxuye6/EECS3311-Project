@@ -7,6 +7,7 @@ import bean.Member;
  */
 public interface MemberDAO {
 
+    //display attributes
     boolean login(Member member);
 
     boolean addMember(Member member);
