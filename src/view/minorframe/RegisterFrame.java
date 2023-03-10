@@ -31,6 +31,7 @@ public class RegisterFrame extends MinorFrame {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(null);
 
+        //fields for input when registeration
         JLabel jl1 = new JLabel("Account");
         JLabel jl2 = new JLabel("Password");
         JLabel jl3 = new JLabel("RePassword");
