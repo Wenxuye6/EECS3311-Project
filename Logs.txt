@@ -121,6 +121,7 @@ testing <Planned Cost: 1h>
 
 	Junit test multiple tests at least
 	and automated
+	
 <2023.3.7 Update the Planning Document Actual Cost: 3h/47mins>
 Based on the meeting with the client team, we made the following changes to our big user stories:
 	1.Added a new big story called "Staff Management," which includes three small stories: "Add Staff," "Remove Staff","imformation of Staff", and "Display Staff Schedule."
