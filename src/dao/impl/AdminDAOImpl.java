@@ -6,6 +6,7 @@ import dao.BaseDAO;
 
 /**
  * Administrator operation implementation
+ This class extends from BaseDAO<Admin>
  */
 public class AdminDAOImpl extends BaseDAO<Admin> implements AdminDAO {
     @Override
