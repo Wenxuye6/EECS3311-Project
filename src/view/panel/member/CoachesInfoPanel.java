@@ -9,6 +9,10 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+  * Welcome to CoachesInfoPanel class, this class extends from Jpael and should be able to show all informations about coaches 
+  */
+
 public class CoachesInfoPanel extends JPanel {
 
     private JTable table;
