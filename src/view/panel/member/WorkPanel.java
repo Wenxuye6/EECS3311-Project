@@ -12,6 +12,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+  * Welcome to WrokPanel, this class extends from JPanel. This class should be able to show the penel of work status and some functions like the Jpanel does
+  */
+
 public class WorkPanel extends JPanel {
 
     private JTable table;
