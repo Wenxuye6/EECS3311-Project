@@ -5,7 +5,9 @@ import dao.BaseDAO;
 import dao.ScheduleDAO;
 
 import java.util.List;
-
+/**
+  * Welcome to ScheduleDaoImpl class, this class extends BaseDao and it will show all the imformation about the course shedule
+  */
 public class ScheduleDAOImpl extends BaseDAO<Schedule> implements ScheduleDAO {
     @Override
     public Object[][] getScheduleArrayList() {
