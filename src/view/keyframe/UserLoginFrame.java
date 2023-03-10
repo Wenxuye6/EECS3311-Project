@@ -27,6 +27,7 @@ public class UserLoginFrame extends KeyFrame {
         initFrame();
     }
 
+    //fields for input when user it logging in
     private void initFrame() {
         JPanel jpanel = new JPanel();
         jpanel.setLayout(null);
@@ -80,6 +81,7 @@ public class UserLoginFrame extends KeyFrame {
         setContentPane(jpanel);
     }
 
+    //after log in
     private void loginAction(ActionEvent e) {
         String name = adminName.getText();
         String pass = new String(password.getPassword());
@@ -93,11 +95,13 @@ public class UserLoginFrame extends KeyFrame {
         }
     }
 
+    //re log in
     private void resetAction(ActionEvent e) {
         adminName.setText("");
         password.setText("");
     }
 
+    //register a account
     private void registerAction(ActionEvent e) {
         setEnabled(false); //Login window cannot be selected
         JFrame This = this;
@@ -112,6 +116,7 @@ public class UserLoginFrame extends KeyFrame {
         });
     }
 
+    //go back to main log in page
     private void backAction(ActionEvent e) {
         new StartFrame().setVisible(true);
         dispose();
