@@ -14,7 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
- * Course operating panel
+ * Course operating panel, this panel should be able to select which course that the user want to take
  */
 public class SelectCoursePanel extends JPanel {
 
