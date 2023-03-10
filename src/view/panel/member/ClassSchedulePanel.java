@@ -14,6 +14,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+  * Welcome to ClassSchedulePanel class, this class extends from Jpael and should be able to show the class scheduale 
+  */
+
 public class ClassSchedulePanel extends JPanel {
 
     private JTable table;
