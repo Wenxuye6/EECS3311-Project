@@ -9,6 +9,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * add new course interface, this class extends from MinorFrame and should be able to add new course to the system
+ */
+
 public class AddCourseFrame extends MinorFrame {
 
     private final CourseDAO courseDAO = new CourseDAOImpl();
