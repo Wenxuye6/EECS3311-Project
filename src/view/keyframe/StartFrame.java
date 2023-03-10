@@ -7,6 +7,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 //mainpage
+/**
+ *This class shows main page，this frame extends from KeyFrame.
+ */
 public class StartFrame extends KeyFrame {
 
     public StartFrame() {
