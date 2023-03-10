@@ -18,11 +18,13 @@ public class GymManageMainFrame extends KeyFrame {
 
     private final CardLayout cardLayout = new CardLayout();
 
+    //fields for admin to input 
     public GymManageMainFrame(String username) {
         super("GymManageSystem", 900, 650);
         initFrame(username);
     }
 
+    //input username
     private void initFrame(String username) {
         JPanel contentPane = new JPanel() {
             public void paintComponent(Graphics g) {
@@ -78,6 +80,7 @@ public class GymManageMainFrame extends KeyFrame {
                 cardLayout.show(panel, "member");
             }
         });
+        //make the code robust, the code returns error if the input is invalid
         memberButton.setBounds(50, 170, 150, 30);
         contentPane.add(memberButton);
 
