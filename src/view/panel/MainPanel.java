@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Welcome Panel
+ * Welcome Panel, this class should be able to show the set of welcome and show the user's identification.
  */
 public class MainPanel extends JPanel {
 
