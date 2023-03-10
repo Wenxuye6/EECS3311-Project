@@ -1,7 +1,9 @@
 package dao;
 
 import bean.Course;
-
+/**
+ * User;s CourseDao interface
+ */
 public interface CourseDAO {
 
     Object[][] getCourseArrayList();
