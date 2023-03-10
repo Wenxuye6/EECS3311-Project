@@ -14,9 +14,11 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Objects;
 
+
 /**
- * User operating panel
- */
+  * User operating panel. Welcome to MemberPanel class, this class extends from Jpael and should be able to show the functions that users will use 
+  */
+
 public class MemberPanel extends JPanel {
 
     private JTable table;
