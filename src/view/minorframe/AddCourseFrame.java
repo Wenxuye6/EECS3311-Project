@@ -24,6 +24,7 @@ public class AddCourseFrame extends MinorFrame {
         initFrame();
     }
 
+    //fields to input when addding a course
     private void initFrame() {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(null);
@@ -71,6 +72,7 @@ public class AddCourseFrame extends MinorFrame {
         setContentPane(jPanel);
     }
 
+    //add course button
     private void addCourseAction(ActionEvent e) {
         String courseName = jtf2.getText().trim();
         String price = jtf3.getText().trim();
@@ -94,6 +96,7 @@ public class AddCourseFrame extends MinorFrame {
         }
     }
 
+    //reset button
     private void resetAction(ActionEvent e) {
         jtf1.setText("");
         jtf2.setText("");

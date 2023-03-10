@@ -25,6 +25,7 @@ public class AddMemberFrame extends MinorFrame {
         initFrame();
     }
 
+    //fields for input when register a membership
     private void initFrame() {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(null);
@@ -113,6 +114,7 @@ public class AddMemberFrame extends MinorFrame {
         setContentPane(jPanel);
     }
 
+    //button for add membership
     private void addMemberAction(ActionEvent e) {
         String account = jtf12.getText().trim();
         String realName = jtf13.getText().trim();
@@ -147,6 +149,7 @@ public class AddMemberFrame extends MinorFrame {
         }
     }
 
+    //buttons for reset
     private void resetAction(ActionEvent e) {
         jrb1.setSelected(false);
         jrb2.setSelected(false);

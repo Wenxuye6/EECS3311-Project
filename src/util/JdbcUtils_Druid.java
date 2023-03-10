@@ -19,6 +19,7 @@ public class JdbcUtils_Druid {
 
     static DataSource dataSource = new DruidDataSource();
 
+    //try connect with DB
     static {
         try {
             InputStream in = JdbcUtils.class.getClassLoader().getResourceAsStream("druid-config.properties");

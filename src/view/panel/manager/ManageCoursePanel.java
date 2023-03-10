@@ -19,6 +19,7 @@ import java.awt.event.*;
 
 public class ManageCoursePanel extends JPanel {
 
+ //fields for course panel
     private JTable table;
     private DefaultTableModel tdm;
     private JTextField jtf1, jtf2, jtf3;
@@ -42,6 +43,7 @@ public class ManageCoursePanel extends JPanel {
         initPanel();
     }
 
+ // fields in panel
     private void initPanel() {
         initTable();
 
@@ -114,6 +116,7 @@ public class ManageCoursePanel extends JPanel {
         delete.addActionListener(this::deleteAction);
     }
 
+ //add course button
     private void addCourseAction(ActionEvent e) {
         addCourse.setEnabled(false);
         modify.setEnabled(false);
@@ -243,6 +246,7 @@ public class ManageCoursePanel extends JPanel {
         table.getTableHeader().setReorderingAllowed(false); //Cannot change the position of a column
     }
 
+ //reset button
     private void resetValue() {
         jtf1.setText("");
         jtf2.setText("");

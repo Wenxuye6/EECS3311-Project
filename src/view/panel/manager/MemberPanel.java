@@ -21,6 +21,7 @@ import java.util.Objects;
 
 public class MemberPanel extends JPanel {
 
+ //membership page - fields
     private JTable table;
     private DefaultTableModel tdm;
     private JTextField jtf11, jtf12, jtf13, jtf14, jtf15, jtf16, jtf17;
@@ -45,6 +46,7 @@ public class MemberPanel extends JPanel {
         initPanel();
     }
 
+ //fields for manageing memberships
     private void initPanel() {
         initTable();
 
@@ -157,6 +159,7 @@ public class MemberPanel extends JPanel {
         delete.addActionListener(this::deleteAction);
     }
 
+  // add membership
     private void addMemberAction(ActionEvent e) {
         addMember.setEnabled(false);
         modify.setEnabled(false);
@@ -338,6 +341,7 @@ public class MemberPanel extends JPanel {
         table.getTableHeader().setReorderingAllowed(false); //Cannot change the position of a column
     }
 
+ //reset button
     private void resetValue() {
         jtf11.setText("");
         jtf12.setText("");

@@ -4,8 +4,10 @@ import bean.Schedule;
 
 public interface ScheduleDAO {
 
+    //link with databse
     Object[][] getScheduleArrayList();
 
+    //display attributes
     boolean addSchedule(Schedule schedule);
 
     void deleteScheduleById(int id);
