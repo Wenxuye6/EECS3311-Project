@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Administrator operation page
+ * Administrator operation page, this class extends from KeyFrame and should be able to allow administrator to do some operations 
  */
 public class GymManageMainFrame extends KeyFrame {
 
