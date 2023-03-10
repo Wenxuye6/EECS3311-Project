@@ -11,6 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
 
 public class member extends JFrame {
 
@@ -148,5 +149,9 @@ public class member extends JFrame {
 		});
 		addmemberButton.setBounds(56, 294, 117, 23);
 		contentPane.add(addmemberButton);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(17, 334, 341, 131);
+		contentPane.add(textPane);
 	}
 }

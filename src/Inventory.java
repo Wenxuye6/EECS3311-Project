@@ -1,4 +1,4 @@
-package Inventory;
+//package Inventory;
 
 import java.util.ArrayList;
 
@@ -56,7 +56,7 @@ public class Inventory {
 	}
 	
 	public void showAll() {
-		System.out.println("\n"+dumbbell_list.toString()+ yogaMat_list.toString());
+		System.out.println("\n"+dubbell_list.toString()+ yogaMat_list.toString());
 	}
 	
 }
