@@ -8,6 +8,7 @@ import java.awt.*;
  */
 public class MainPanel extends JPanel {
 
+    //main panel where shows identity
     public MainPanel(String username, String identity) {
         setLayout(null);
         Label label = new Label("Welcome ' " + username + " ' to use GymManage System");
