@@ -55,3 +55,99 @@ The planning document is finalized, the implemented storeis are mentioned at the
 Architecture sketch is completed and uploaded by using MVC.
 
 Write comment for membership class, explain the functions of every methods, add wiki file.
+
+2023.2.16
+Meet up with team 1 as their client team 
+supposed to meet at 6pm (team 1 show up at 6:10)
+
+Participants: 
+Team 1: Zohair Ahmed, Ammad Qureshi, Nicholas Lachhman
+Team 2 (our team): Haocheng Sun, Tao Chen, Wenxu Ye
+
+meeting duration: 32mins
+
+Meeting summary:
+Team 1 is doing a book searching software where users can search a book, download a book and create a book club where other users can join.
+
+Team 2 gives 3 suggestions in total.
+The first one is to create a new user story for adding a book. To be specific, the user can add a book into the database. In this way, every user can also be a distributer.
+Second suggestion is searching for clubs by features of this club.
+Third suggestion is adding favorite books in the profile. When searching another user, the user's favorites should be shown. 
+
+
+2023.2.21
+Meeting summary with Team3:
+1. Modify staff
+It seems like your user stories mention coaches, managers, and members, but don't mention anything about other kinds of staff. These would be people at the gym like front desk receptionists, janitorial staff, IT etc.
+2. Cancel Membership
+We noticed that your modifications for memberships didn't include canceling a membership. A lot of gyms require contracts so there's a cancelation policy. So there might be a cancelation window or cancelation fee.
+3. Different types of memberships
+Some gyms allow for different payment plans, such as single day passes, pay per visit, weekly/monthly/yearly payments
+Those are the ideas we have so far. If none of those work we can come up with some more or modify them to work better for you
+
+2023.3.1 
+Temporary plan:
+Zhige Xia: responsible for implementation of database and UI
+Haocheng: Update the planning document and update the structure graphs.
+Wenxu: assisting the coding of inner component of the software
+Tao Chen:  assisting the coding of inner component of the software
+Sami: work on the Wiki and testing
+
+2023.3.7 
+continue the work and specify the work in details:
+
+update planning document <Planned Cost: 1h>
+
+ 	priority
+ 	specify which one is new (at least one
+	which one is implemented in itr 2
+	which one is revised
+	do the ones have the most priority better do the new one since they want the new one to be high priority
+
+implementation <Planned Cost: 3h>	
+
+	new user story mentioned by the client team
+	new user stories (does not specify how much though
+	note: code should have comment 
+
+documentation <Planned Cost: 2h>:
+
+	wiki update
+	copies of new or revised big user stories and detailed user stories 
+	discuss the violation of the previous plan
+	planned cost and actual cost
+
+testing <Planned Cost: 1h>
+
+	Junit test multiple tests at least
+	and automated
+	
+<2023.3.7 Update the Planning Document Actual Cost: 3h/47mins>
+Based on the meeting with the client team, we made the following changes to our big user stories:
+	1.Add a new story called "Staff Management," which includes three small stories: "Add Staff," "Remove Staff”, “information of Staff", and "Display Staff Schedule."
+	2.Rivise some old stories including "Register new Membership" in big story "Modify Membership."
+	2.Add a small story called "Cancel Membership" "
+	3.Add types of membership, including daily pass, monthly pass, and season pass.
+
+Creating a new Word document (temporary version) that include:
+	1.Showing the priorities for all of the existing big stories.
+	2.Showing the planned cost and the actual cost for each detailed story and developer task.
+
+2023.3.8 
+<Planned Cost: 3h>   
+	1.Create new big user stroy "Gym Staff Registration"  
+	2.Add three small stroies: "Rigister New Staff" , "View Staffs' Schedule" and "View Staffs' title" below the big user stroy "Gym Staff Registration"
+	3.Create new big user story "Log in"
+	4.Add two small stories: "Log in as User" and "Log in as admin"
+	5.Revised architecture diagram
+	6.Revised the small story registration of the membership(delete the removing funtion from membership registration)
+	7.Add new small stroy "Delete Current Membership" below the big stroy "Modify Membership"
+	8.Revise Big Story2 "Modify Coach or Membership as a Manager"
+<Actual Cost: 3h/56min>
+
+
+2023.3.9 
+
+Revised architecture sketch <Planned Cost: 2h>  <Actual Cost: 1h 20min>
+
+Write Comments on all source code <Planned Cost: 5h>  <Actual Cost: 3h 50min>
