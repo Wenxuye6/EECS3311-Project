@@ -124,11 +124,11 @@ testing <Planned Cost: 1h>
 	
 <2023.3.7 Update the Planning Document Actual Cost: 3h/47mins>
 Based on the meeting with the client team, we made the following changes to our big user stories:
-	1.Added a new big story called "Staff Management," which includes three small stories: "Add Staff," "Remove Staff","imformation of Staff", and "Display Staff Schedule."
-	2.Rivise the violation of the small story of "Rigister new Membership" in big story "Modify Membership"
-	2.Added a small story called "Cancellation of Membership" to the big story "Modify Membership."
-	3.Added a series of types of membership, such as daily pass, monthly pass, and season pass.
-	
+	1.Add a new story called "Staff Management," which includes three small stories: "Add Staff," "Remove Staff”, “information of Staff", and "Display Staff Schedule."
+	2.Rivise some old stories including "Register new Membership" in big story "Modify Membership."
+	2.Add a small story called "Cancel Membership" "
+	3.Add types of membership, including daily pass, monthly pass, and season pass.
+
 Creating a new Word document (temporary version) that include:
 	1.Showing the priorities for all of the existing big stories.
 	2.Showing the planned cost and the actual cost for each detailed story and developer task.
@@ -146,4 +146,8 @@ Creating a new Word document (temporary version) that include:
 <Actual Cost: 3h/56min>
 
 
+2023.3.9 
 
+Revised architecture sketch <Planned Cost: 2h>  <Actual Cost: 1h 20min>
+
+Write Comments on all source code <Planned Cost: 5h>  <Actual Cost: 3h 50min>
