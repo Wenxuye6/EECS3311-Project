@@ -10,7 +10,7 @@ To access Admin account. With account: Admin and password:123456.(You must run g
 If your exe file is stuck in login in, go into your mysql and check the gym Database has been created or not, if not, please run gym.sql again.
 
 For Iteartion2 update: We have implemented different user logins and you can register different identities. Different main screens have been designed for each of these different users. We display the user's current login name and identity on the home page. 
-For the admin account we can create new courses, modify courses, and delete existing courses, all the options within the "manage course" button. In contrast to Iteartion1, we can now modify the user's identity within the "manage member".
+For the admin account we can create new courses, modify courses, and delete existing courses, all the options within the "manage course" button. Contrast to Iteartion1, we can now modify the user's identity within the "manage member".
 For membership account users can change their personal information, select courses, view information about existing coaches and view class schedules.
 For coach, front desk, janitorial we have set up an identical interface where you can change your personal information and view work infomation
 
