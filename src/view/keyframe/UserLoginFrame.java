@@ -13,7 +13,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 /**
- * User login page
+ * User login page，this frame extends from KeyFrame and user should be able to use this page to login
  */
 public class UserLoginFrame extends KeyFrame {
 
