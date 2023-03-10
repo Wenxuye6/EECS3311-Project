@@ -17,4 +17,4 @@ For coach, front desk, janitorial we have set up an identical interface where yo
 
 FOR CODE：
 
-Also need run gym.sql before to test the code, We have saved all the user data in mysql, so did not run gym.sql will get an error when you test main.java to create or enter the account 
+Also need run gym.sql before test the code, We have saved all the user data in mysql, so not run gym.sql will get an error when you test main.java to create or enter the account 
