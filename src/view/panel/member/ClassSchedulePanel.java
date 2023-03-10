@@ -139,7 +139,7 @@ public class ClassSchedulePanel extends JPanel {
 
         scheduleDAO.deleteScheduleById((int) table.getValueAt(row, 0));
         tdm.removeRow(row);
-        resetValue(); //清空文本框
+        resetValue(); //Clear text box
         jcb.setEnabled(false);
         JOptionPane.showMessageDialog(null, "Delete succeeded!");
     }
