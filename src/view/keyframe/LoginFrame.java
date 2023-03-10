@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 /**
- * Administrator login page
+ * Administrator login page, this page is for administrator to login 
  */
 public class LoginFrame extends KeyFrame {
 
