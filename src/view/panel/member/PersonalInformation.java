@@ -8,6 +8,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+  * Welcome to PersonalInformation class, this class extends from Jpael and should be able to show all user's personal information 
+  */
+
 public class PersonalInformation extends JPanel {
 
     private JTextField jtf11, jtf12, jtf13, jtf14, jtf15, jtf16, jtf17;
