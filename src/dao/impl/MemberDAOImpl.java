@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * User action implementation
+   This class extends form BaseDao
  */
 public class MemberDAOImpl extends BaseDAO<Member> implements MemberDAO {
     @Override
