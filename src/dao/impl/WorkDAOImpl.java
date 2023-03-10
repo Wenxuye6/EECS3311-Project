@@ -5,7 +5,9 @@ import dao.BaseDAO;
 import dao.WorkDAO;
 
 import java.util.List;
-
+/**
+  * Welcome to WorkDAOImpl class, this class extends BaseDao
+  */
 public class WorkDAOImpl extends BaseDAO<Work> implements WorkDAO {
     @Override
     public Object[][] getWorkArrayListByName(String account) {
