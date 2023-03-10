@@ -9,6 +9,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * add new member interface, this class extends from MinorFrame and should be able to add new member to the system
+ */
+
 public class AddMemberFrame extends MinorFrame {
 
     private JTextField jtf11, jtf12, jtf13, jtf14, jtf15, jtf16, jtf17, pass2;
