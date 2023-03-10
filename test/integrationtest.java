@@ -7,7 +7,7 @@ import dao.impl.CourseDAOImpl;
 import dao.impl.MemberDAOImpl;
 import dao.impl.ScheduleDAOImpl;
 
-public class Test {
+public class integrationtest {
     //test for search
     @org.junit.Test
     public void testMember() {
