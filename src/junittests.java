@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import bean.Admin;
 import bean.Course;
+import bean.Member;
+import bean.Schedule;
 
 
 public class junittests {
@@ -105,6 +107,92 @@ public class junittests {
 	
 	
 	
+	@Test
+	public void test6() {
+		Member member = new Member(1234, "acct1", "12sami", "samiullah", "male", 5.11, 80.0, 30.0, 150.0, "Canadian");
+		
+		member.setMemberId(1456);
+		member.setAccount("acct2");
+		member.setPassword("12ullah");
+		member.setRealName("ullahji");
+		member.setGender("female");
+		member.setHeight(5.9);
+		member.setWeight(90.0);
+		member.setBMI(35.0);
+		member.setFund(200.0);
+		member.setIdentity("american");
+		
+		Integer id = member.getMemberId();
+		assertEquals("1456", id);
+		
+		String account = member.getAccount();
+		assertEquals("acct2", account);
+		
+		String password = member.getPassword();
+		assertEquals("12ullah", password);
+		
+		String name = member.getRealName();
+		assertEquals("ullahji", name);
+		
+		String gender = member.getGender();
+		assertEquals("female", gender);
+		
+		Double height = member.getHeight();
+		assertEquals("5.9", height);
+		
+		Double weight = member.getWeight();
+		assertEquals("90.0", weight);
+		
+		Double bmi = member.getBMI();
+		assertEquals("35.0", bmi);
+		
+		Double fund = member.getFund();
+		assertEquals("200.0", fund);
+				
+		String ident = member.getIdentity();
+		assertEquals("american", ident);
+	}
+	
+	
+	
+	
+	
+	@Test
+	public void test7() {
+		Schedule sched = new Schedule(1234, "sami", "gym20", "jim");
+		
+		sched.setCoachName("jeff");
+		sched.setMemberName("irfan");
+		sched.setCourseName("gym60");
+		sched.setScheduleId(5546);
+		
+		Integer id = sched.getScheduleId();
+		assertEquals("5546", id);
+		
+		String coach = sched.getCoachName();
+		assertEquals("jeff", coach);
+		
+		String name = sched.getMemberName();
+		assertEquals("irfan", name);
+		
+		String course = sched.getCourseName();
+		assertEquals("gym60", course);
+		
+		assertEquals("Schedule{" +
+                "scheduleId=" + "5546" + ", memberName='" + "irfan" + '\'' + ", courseName='" + "gym60" + '\'' + ", coachName='" + '\'' + '}', sched.toString());
+		
+		
+	}
+	
+	
+	
+	@Test
+	public void test8() {
+		
+		
+		
+		
+	}
 	
 
 }
