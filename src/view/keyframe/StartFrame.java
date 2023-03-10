@@ -26,9 +26,11 @@ public class StartFrame extends KeyFrame {
         JLabel info = new JLabel("This is a simple version, ONLY for Iteration 2");
         info.setFont(new Font("", Font.PLAIN, 15));
 
+        //software should have two different portals of log in
         JButton user = new JButton("Log in as User");
         JButton admin = new JButton("Log in as Manage");
 
+        //set positions of bars
         labelTitle.setBounds(250, 50, 600, 60);
         info.setBounds(300, 120, 500, 30);
         user.setBounds(500, 520, 150, 30);
@@ -46,11 +48,13 @@ public class StartFrame extends KeyFrame {
         setContentPane(jpanel);
     }
 
+    //log in as user
     private void userAction(ActionEvent e) {
         new UserLoginFrame().setVisible(true);
         dispose();
     }
 
+    //log in as admin
     private void adminAction(ActionEvent e) {
         new LoginFrame().setVisible(true);
         dispose();
