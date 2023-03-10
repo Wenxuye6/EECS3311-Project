@@ -5,7 +5,9 @@ import dao.BaseDAO;
 import dao.CourseDAO;
 
 import java.util.List;
-
+/**
+  * Wlcomte to CourseDAOImpl class, this class extends BaseDAO<Course>
+  */
 public class CourseDAOImpl extends BaseDAO<Course> implements CourseDAO {
 
     @Override
