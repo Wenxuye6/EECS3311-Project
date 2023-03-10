@@ -14,8 +14,9 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * Course operating panel
- */
+  * User operating panel. Welcome to ManageCoursePanel class, this class extends from Jpael and should be able to show the functions that admin will use for managing courses
+  */
+
 public class ManageCoursePanel extends JPanel {
 
     private JTable table;
