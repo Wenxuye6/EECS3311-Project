@@ -151,3 +151,14 @@ Creating a new Word document (temporary version) that include:
 Revised architecture sketch <Planned Cost: 2h>  <Actual Cost: 1h 20min>
 
 Write Comments on all source code <Planned Cost: 5h>  <Actual Cost: 3h 50min>
+
+
+2023.4.4
+meeting minutes: 26mins
+we scheduled a group meeting today and assigned jobs for each group member:
+
+Haocheng update documents (planning document + Retrospective activity’s documentation)
+Taochen and Wenxu will assist Haocheng
+Zhige will continue implement more user stories 
+Temiloluwa will assist Zhige
+Sami will continue make Junit tests and fix the missing Junit test that we missed in last iteration
