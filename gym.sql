@@ -11,11 +11,9 @@
  Target Server Version : 80023
  File Encoding         : 65001
 
- Date: 09/03/2023 17:00:54
+ Date: 05/04/2023 13:57:58
 */
 
-CREATE DATABASE `gym`;
-use gym;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -52,6 +50,26 @@ CREATE TABLE `t_course`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for t_equipment
+-- ----------------------------
+DROP TABLE IF EXISTS `t_equipment`;
+CREATE TABLE `t_equipment`  (
+  `equipmentId` int(0) NOT NULL AUTO_INCREMENT,
+  `equipmentName` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `currentNum` int(0) NULL DEFAULT NULL,
+  `damagedNum` int(0) NULL DEFAULT NULL,
+  `marketPrice` double(10, 2) NULL DEFAULT NULL,
+  `value` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`equipmentId`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of t_equipment
+-- ----------------------------
+INSERT INTO `t_equipment` VALUES (1, 'Treadmill', 10, 3, 1200.00, 'A treadmill is a device generally for walking or running or climbing while staying in the same place.');
+INSERT INTO `t_equipment` VALUES (2, 'Dumbbell', 50, 6, 30.00, 'The dumbbell is a piece of equipment used in weight training. It can be used individually or in pairs, with one in each hand.');
+
+-- ----------------------------
 -- Table structure for t_member
 -- ----------------------------
 DROP TABLE IF EXISTS `t_member`;
@@ -83,7 +101,7 @@ CREATE TABLE `t_schedule`  (
   `courseName` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `coachName` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`scheduleId`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_schedule
