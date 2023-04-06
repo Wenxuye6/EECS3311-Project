@@ -14,6 +14,8 @@
  Date: 05/04/2023 13:57:58
 */
 
+CREATE DATABASE `gym`;
+use gym;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
