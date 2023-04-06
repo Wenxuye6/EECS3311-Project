@@ -162,3 +162,13 @@ Taochen and Wenxu will assist Haocheng
 Zhige will continue implement more user stories 
 Temiloluwa will assist Zhige
 Sami will continue make Junit tests and fix the missing Junit test that we missed in last iteration
+
+2023.4.6
+We revised every script of each part demonstarion
+All team members had meeting and practice for presentation before real presenting our project in laboratory
+Tao Chen works on the summary QAs from other team
+Wenxu Ye and  Tao Chen work on the retrospectives
+Haocheng 
+
+
+
