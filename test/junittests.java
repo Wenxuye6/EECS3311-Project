@@ -188,8 +188,31 @@ public class junittests {
 	
 	@Test
 	public void test8() {
+		Work work= new Work(1234, "Sami", "Cleaning", "American");
 		
+		work.setWorkId(4506);
+		work.setMemberName("Umer");
+		work.setWork("Inventory Work");
+		work.setIdentity("Canadian");
 		
+		Integer ID = work.getWorkId();
+		assertEquals("4506", ID);
+		
+		String Name = work.getMemberName();
+		assertEquals("Umer", Name);
+		
+		String kam = work.getWork();
+		assertEquals("Inventory Work", kam);
+		
+		String identity = work.getIdentity();
+		assertEquals("Canadian", identity);
+		
+		assertEquals("Work{" +
+                "workId=" + "4506" +
+                ", memberName='" + "Umer" + '\'' +
+                ", work='" + "Inventory Work" + '\'' +
+                ", identity='" + "Canadian" + '\'' +
+                '}', work.toString());
 		
 		
 	}
