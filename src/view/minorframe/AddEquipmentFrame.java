@@ -10,7 +10,7 @@ import view.baseview.MinorFrame;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-
+// This class AddEquipmentFrame extends MinorFrame
 public class AddEquipmentFrame extends MinorFrame {
 
     private final EquipmentDAO equipmentDAO = new EquipmentDAOImpl();
