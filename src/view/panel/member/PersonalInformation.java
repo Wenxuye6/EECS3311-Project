@@ -139,7 +139,12 @@ public class PersonalInformation extends JPanel {
         }
         double h = Double.parseDouble(height);
         double w = Double.parseDouble(weight);
-        Double BMI = w / Math.pow(h, 2);
+        double BMI;
+        if (h == 0 || w == 0) { //zero
+            BMI = 0;
+        } else {
+            BMI = w / Math.pow(h, 2);
+        }
         String s = String.format("%.2f", BMI);
 
         String gender;
