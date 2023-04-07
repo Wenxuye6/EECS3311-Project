@@ -5,7 +5,9 @@ import dao.BaseDAO;
 import dao.EquipmentDAO;
 
 import java.util.List;
-
+/**
+ * Welcome to EquipmentDAOImpl class, this class extends BaseDao and it will show all the imformation about the Equipment
+ */
 public class EquipmentDAOImpl extends BaseDAO<Equipment> implements EquipmentDAO {
     @Override
     public Object[][] getEquipmentArrayList() {
