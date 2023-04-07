@@ -163,12 +163,26 @@ Zhige will continue implement more user stories
 Temiloluwa will assist Zhige
 Sami will continue make Junit tests and fix the missing Junit test that we missed in last iteration
 
+2023.4.5
+Developer Tasks in Iteration 3
+
+Retrospective Document  - responsible by Tao Chen
+
+Implementation on iteration 3 user stories - responsible by Wenxu Ye
+
+UI and Database - responsible by Zhige Xia
+
+Refactor - responsible by Odunfa Temiloluwa 
+
+Documentation - responsible by Haocheng Sun
+update wiki 
+update planning document 
+revised architecture diagram
+
+Testing  - responsible by Sami Ullah
+
 2023.4.6
-We revised every script of each part demonstarion
-All team members had meeting and practice for presentation before real presenting our project in laboratory
-Tao Chen works on the summary QAs from other team
+
+All team members had meeting and practice for presentation
+Tao Chen works on the summary of QAs from other team
 Wenxu Ye and  Tao Chen work on the retrospectives
-Haocheng 
-
-
-
