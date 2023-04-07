@@ -243,14 +243,19 @@ public class MemberPanel extends JPanel {
             return;
         }
         if (!CheckDigitUtil.check(height) || !CheckDigitUtil.check(weight) || !CheckDigitUtil.check(Fund)) { //digit
-            System.out.println(height);
-            System.out.println(weight);
+            //System.out.println(height);
+            //System.out.println(weight);
             JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         double h = Double.parseDouble(height);
         double w = Double.parseDouble(weight);
-        Double BMI = w / Math.pow(h, 2);
+        double BMI;
+        if (h == 0 || w == 0) { //zero
+            BMI = 0;
+        } else {
+            BMI = w / Math.pow(h, 2);
+        }
         String s = String.format("%.2f", BMI);
 
         String gender;
