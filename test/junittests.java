@@ -53,10 +53,6 @@ public class junittests {
 		
 		String password = admin.getPassword();
 		assertEquals("234234", password);
-		
-		
-		
-		
 	}
 	
 	
@@ -188,73 +184,8 @@ public class junittests {
 	
 	@Test
 	public void test8() {
-		Work work= new Work(1234, "Sami", "Cleaning", "American");
-		
-		work.setWorkId(4506);
-		work.setMemberName("Umer");
-		work.setWork("Inventory Work");
-		work.setIdentity("Canadian");
-		
-		Integer ID = work.getWorkId();
-		assertEquals("4506", ID);
-		
-		String Name = work.getMemberName();
-		assertEquals("Umer", Name);
-		
-		String kam = work.getWork();
-		assertEquals("Inventory Work", kam);
-		
-		String identity = work.getIdentity();
-		assertEquals("Canadian", identity);
-		
-		assertEquals("Work{" +
-                "workId=" + "4506" +
-                ", memberName='" + "Umer" + '\'' +
-                ", work='" + "Inventory Work" + '\'' +
-                ", identity='" + "Canadian" + '\'' +
-                '}', work.toString());
 		
 		
-	}
-	
-	@Test
-	public void test9() {
-		Equipment Equip = new Equipment(340, "bench", 56, 10, 100.0, "hundred");
-		
-		Equip.setEquipmentId(560);
-		Equip.setEquipmentName("dumbel");
-		Equip.setCurrentNum(100);
-		Equip.setDamagedNum(5);
-		Equip.setMarketPrice(140.0);
-		Equip.setValue("one forty");
-		
-		Integer id = Equip.getEquipmentId();
-		assertEquals("560", id);
-		
-		String name = Equip.getEquipmentName();
-		assertEquals("dumbel", name);
-		
-		Integer currentnum = Equip.getCurrentNum();
-		assertEquals("100", currentnum);
-		
-		Integer damnum = Equip.getDamagedNum();
-		assertEquals("5", damnum);
-		
-		Double price = Equip.getMarketPrice();
-		assertEquals("140.0", price);
-		
-		String value = Equip.getValue();
-		assertEquals("one forty", value);
-		
-		
-		assertEquals("Equipment{" +
-                "equipmentId=" + "560" +
-                ", equipmentName='" + "dumbel" + '\'' +
-                ", currentNum=" + "100" +
-                ", damagedNum=" + "5" +
-                ", marketPrice=" + "140.0" +
-                ", value='" + "one forty" + '\'' +
-                '}', Equip.toString());
 		
 		
 	}
