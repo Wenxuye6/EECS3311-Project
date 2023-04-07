@@ -28,4 +28,4 @@ We have added a manage equipment option on the admin screen.Fixed a few bugs, wh
 
 FOR CODE：
 
-Also need run gym.sql before test the code, We have saved all the user data in mysql, so not run gym.sql will get an error when you test main.java to create or enter the account 
+Before testing the code, please ensure that you have executed the gym.sql file. This is because all user data has been stored in MySQL, and failure to run gym.sql may result in errors when attempting to create or access user accounts through main.java
