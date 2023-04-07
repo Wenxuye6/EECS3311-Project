@@ -2,8 +2,10 @@ package view.panel.member;
 
 import bean.Schedule;
 import dao.CourseDAO;
+import dao.MemberDAO;
 import dao.ScheduleDAO;
 import dao.impl.CourseDAOImpl;
+import dao.impl.MemberDAOImpl;
 import dao.impl.ScheduleDAOImpl;
 
 import javax.swing.*;
@@ -24,6 +26,7 @@ public class SelectCoursePanel extends JPanel {
     private JTextArea jta;
     private final CourseDAO courseDAO = new CourseDAOImpl();
     private final ScheduleDAO scheduleDAO = new ScheduleDAOImpl();
+    private final MemberDAO memberDAO = new MemberDAOImpl();
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -99,10 +102,10 @@ public class SelectCoursePanel extends JPanel {
                 MouseReleased();
             }
         });
-
         select.addActionListener(e -> selectAction(account));
     }
 
+    //select button
     private void selectAction(String account) {
         if (table.getSelectedRowCount() > 1) {
             JOptionPane.showMessageDialog(null, "Too many selected!", "warning", JOptionPane.WARNING_MESSAGE);
@@ -120,9 +123,26 @@ public class SelectCoursePanel extends JPanel {
             return;
         }
 
-        boolean success = scheduleDAO.addSchedule(new Schedule(0, account, String.valueOf(table.getValueAt(row, 1)), ""));
+        //check fund > price?
+        double Fund = memberDAO.getFundByAccount(account);
+        //System.out.println(Fund);
+        double price = Double.parseDouble(String.valueOf(table.getValueAt(row, 2)));
+        if(Fund < price) { //Fund Not Enough
+            JOptionPane.showMessageDialog(null, "Fund Not Enough!", "warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        Fund -= price;
 
+        //check Is it repeated
+        String courseName = String.valueOf(table.getValueAt(row, 1));
+        if(scheduleDAO.courseExist(account, courseName)) {
+            JOptionPane.showMessageDialog(null, "Course Repetition！", "warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        //add Course Schedule
+        boolean success = scheduleDAO.addSchedule(new Schedule(0, account, courseName, ""));
         if (success) {
+            memberDAO.updateFund(account, String.valueOf(Fund)); //update Fund
             JOptionPane.showMessageDialog(null, "Selection succeeded!");
         } else {
             JOptionPane.showMessageDialog(null, "Selection failed!", "warning", JOptionPane.ERROR_MESSAGE);

@@ -90,7 +90,7 @@ public class Member {
         this.gender = gender;
     }
 
-    
+
     //getter height
     public Double getHeight() {
         return height;
@@ -101,7 +101,7 @@ public class Member {
         this.height = height;
     }
 
-    
+
     //getter weight
     public Double getWeight() {
         return weight;

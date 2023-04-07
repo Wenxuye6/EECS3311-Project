@@ -95,7 +95,7 @@ public class UserLoginFrame extends KeyFrame {
         }
     }
 
-    //re log in
+    //reset
     private void resetAction(ActionEvent e) {
         adminName.setText("");
         password.setText("");

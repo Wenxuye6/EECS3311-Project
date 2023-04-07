@@ -3,6 +3,7 @@ package view.minorframe;
 import bean.Member;
 import dao.MemberDAO;
 import dao.impl.MemberDAOImpl;
+import util.CheckDigitUtil;
 import view.baseview.MinorFrame;
 
 import javax.swing.*;
@@ -12,7 +13,6 @@ import java.awt.event.ActionEvent;
 /**
  * add new member interface, this class extends from MinorFrame and should be able to add new member to the system
  */
-
 public class AddMemberFrame extends MinorFrame {
 
     private JTextField jtf11, jtf12, jtf13, jtf14, jtf15, jtf16, jtf17, pass2;
@@ -50,6 +50,7 @@ public class AddMemberFrame extends MinorFrame {
         jtf14 = new JTextField(); //height
         jtf15 = new JTextField(); //weight
         jtf16 = new JTextField(); //BMI
+        jtf16.setEnabled(false);
         jtf17 = new JTextField(); //Fund
         pass2 = new JTextField(); //pass
         jrb1 = new JRadioButton("male");
@@ -120,7 +121,7 @@ public class AddMemberFrame extends MinorFrame {
         String realName = jtf13.getText().trim();
         String height = jtf14.getText().trim();
         String weight = jtf15.getText().trim();
-        String BMI = jtf16.getText().trim();
+        //String BMI = jtf16.getText().trim();
         String Fund = jtf17.getText().trim();
         String pass = pass2.getText().trim();
         String identity = (String) jcb.getSelectedItem();
@@ -130,17 +131,23 @@ public class AddMemberFrame extends MinorFrame {
         } else if(jrb2.isSelected()) {
             gender = "female";
         }
-        if ("".equals(account) || "".equals(realName) || "".equals(pass) ||"".equals(height) || "".equals(weight) || "".equals(BMI) || "".equals(Fund) ||"".equals(gender) || "Please Select……".equals(identity)) {
+        if ("".equals(account) || "".equals(realName) || "".equals(pass) ||"".equals(height) || "".equals(weight) || "".equals(Fund) ||"".equals(gender) || "Please Select……".equals(identity)) {
             JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-
+        if(!CheckDigitUtil.check(height) || !CheckDigitUtil.check(weight) || !CheckDigitUtil.check(Fund)) { //digit
+            JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
         int isFlag = JOptionPane.showConfirmDialog(null, "Please confirm");
         if (isFlag > 0) {
             return;
         }
-
-        Member member = new Member(0, account, pass, realName, gender, Double.parseDouble(height), Double.parseDouble(weight), Double.parseDouble(BMI), Double.parseDouble(Fund), identity);
+        double h = Double.parseDouble(height);
+        double w = Double.parseDouble(weight);
+        Double BMI = w / Math.pow(h, 2);
+        String s = String.format("%.2f", BMI);
+        Member member = new Member(0, account, pass, realName, gender, Double.parseDouble(height), Double.parseDouble(weight), Double.parseDouble(s), Double.parseDouble(Fund), identity);
         boolean success = memberDAO.addMember(member);
         if(success) {
             JOptionPane.showMessageDialog(null, "Successfully added!");
@@ -149,7 +156,7 @@ public class AddMemberFrame extends MinorFrame {
         }
     }
 
-    //buttons for reset
+    //reset button
     private void resetAction(ActionEvent e) {
         jrb1.setSelected(false);
         jrb2.setSelected(false);

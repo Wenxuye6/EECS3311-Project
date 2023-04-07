@@ -5,6 +5,7 @@ import dao.MemberDAO;
 import dao.ScheduleDAO;
 import dao.impl.MemberDAOImpl;
 import dao.impl.ScheduleDAOImpl;
+import util.CheckDigitUtil;
 import view.minorframe.AddMemberFrame;
 
 import javax.swing.*;
@@ -14,14 +15,12 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Objects;
 
-
 /**
-  * User operating panel. Welcome to MemberPanel class, this class extends from Jpael and should be able to show the functions that users will use 
-  */
-
+ * User operating panel. Welcome to MemberPanel class, this class extends from Jpael and should be able to show the functions that users will use
+ */
 public class MemberPanel extends JPanel {
 
- //membership page - fields
+    //membership page - fields
     private JTable table;
     private DefaultTableModel tdm;
     private JTextField jtf11, jtf12, jtf13, jtf14, jtf15, jtf16, jtf17;
@@ -46,7 +45,7 @@ public class MemberPanel extends JPanel {
         initPanel();
     }
 
- //fields for manageing memberships
+    //fields for manageing memberships
     private void initPanel() {
         initTable();
 
@@ -159,7 +158,7 @@ public class MemberPanel extends JPanel {
         delete.addActionListener(this::deleteAction);
     }
 
-  // add membership
+    // add membership
     private void addMemberAction(ActionEvent e) {
         addMember.setEnabled(false);
         modify.setEnabled(false);
@@ -236,13 +235,24 @@ public class MemberPanel extends JPanel {
         String realName = jtf13.getText().trim();
         String height = jtf14.getText().trim();
         String weight = jtf15.getText().trim();
-        String BMI = jtf16.getText().trim();
+        //String BMI = jtf16.getText().trim();
         String Fund = jtf17.getText().trim();
         String identity = (String) jcb.getSelectedItem();
-        if ("".equals(account) || "".equals(realName) || "".equals(height) || "".equals(weight) || "".equals(BMI) || "".equals(Fund) || "Please Select……".equals(identity)) {
+        if ("".equals(account) || "".equals(realName) || "".equals(height) || "".equals(weight) || "".equals(Fund) || "Please Select……".equals(identity)) {
             JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
+        if (!CheckDigitUtil.check(height) || !CheckDigitUtil.check(weight) || !CheckDigitUtil.check(Fund)) { //digit
+            System.out.println(height);
+            System.out.println(weight);
+            JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        double h = Double.parseDouble(height);
+        double w = Double.parseDouble(weight);
+        Double BMI = w / Math.pow(h, 2);
+        String s = String.format("%.2f", BMI);
+
         String gender;
         if (jrb1.isSelected()) {
             gender = "male";
@@ -259,15 +269,16 @@ public class MemberPanel extends JPanel {
 
         //search coach/member
         String name = (String) table.getValueAt(row, 1);
-        if (scheduleDAO.coachExist(name) || scheduleDAO.memberExist(name)) {
-            if(!Objects.equals(identity, table.getValueAt(row, 9))) {
+        String i = (String) table.getValueAt(row, 9);
+        if (!i.equals(identity) && (scheduleDAO.coachExist(name) || scheduleDAO.memberExist(name))) {
+            if (!Objects.equals(identity, table.getValueAt(row, 9))) {
                 JOptionPane.showMessageDialog(null, "Modified not supported!", "warning", JOptionPane.WARNING_MESSAGE);
                 return;
             }
         }
 
         Member newMember = new Member(Integer.parseInt(id), account, (String) (table.getValueAt(row, 2)), realName, gender,
-                Double.parseDouble(height), Double.parseDouble(weight), Double.parseDouble(BMI), Double.parseDouble(Fund), identity);
+                Double.parseDouble(height), Double.parseDouble(weight), Double.parseDouble(s), Double.parseDouble(Fund), identity);
         memberDAO.change(newMember);
 
         table.setValueAt(account, row, 1);
@@ -275,7 +286,7 @@ public class MemberPanel extends JPanel {
         table.setValueAt(gender, row, 4);
         table.setValueAt(height, row, 5);
         table.setValueAt(weight, row, 6);
-        table.setValueAt(BMI, row, 7);
+        table.setValueAt(s, row, 7);
         table.setValueAt(Fund, row, 8);
         table.setValueAt(identity, row, 9);
         JOptionPane.showMessageDialog(null, "Modified successfully!");
@@ -303,7 +314,6 @@ public class MemberPanel extends JPanel {
         jtf13.setEnabled(true);
         jtf14.setEnabled(true);
         jtf15.setEnabled(true);
-        jtf16.setEnabled(true);
         jtf17.setEnabled(true);
         jcb.setEnabled(true);
         jrb1.setEnabled(true);
@@ -341,7 +351,7 @@ public class MemberPanel extends JPanel {
         table.getTableHeader().setReorderingAllowed(false); //Cannot change the position of a column
     }
 
- //reset button
+    //reset button
     private void resetValue() {
         jtf11.setText("");
         jtf12.setText("");

@@ -9,7 +9,6 @@ public class BaseFrame extends JFrame {
     public BaseFrame(String title, int width, int height) {
         setTitle(title);
         setSize(width, height);
-//        setIconImage(ImageData.bi); 
         setResizable(false);
         setLocationRelativeTo(null);
     }

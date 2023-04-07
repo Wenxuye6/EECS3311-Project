@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * User action implementation
-   This class extends form BaseDao
+ This class extends form BaseDao
  */
 public class MemberDAOImpl extends BaseDAO<Member> implements MemberDAO {
     @Override
@@ -75,6 +75,12 @@ public class MemberDAOImpl extends BaseDAO<Member> implements MemberDAO {
     }
 
     @Override
+    public List<Member> getMemberList() {
+        String sql = "select * from `t_member`";
+        return getBeanList(sql);
+    }
+
+    @Override
     public Object[][] getCoachArrayList() {
         String sql = "select * from `t_member` where `identity`='coach'";
         List<Object[]> l = getArrayList(sql);
@@ -90,6 +96,18 @@ public class MemberDAOImpl extends BaseDAO<Member> implements MemberDAO {
     public Member getMemberByAccount(String account) {
         String sql = "select * from `t_member` where `account`=?";
         return getBean(sql, account);
+    }
+
+    @Override
+    public void updateFund(String account, String Fund) {
+        String sql = "update `t_member` set Fund=? where `account`=?";
+        update(sql, Fund, account);
+    }
+
+    @Override
+    public Double getFundByAccount(String account) {
+        String sql = "select `Fund` from `t_member` where `account`=?";
+        return getBean(sql, account).getFund();
     }
 
     @Override

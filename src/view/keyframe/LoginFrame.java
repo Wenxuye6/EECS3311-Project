@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 /**
- * Administrator login page, this page is for administrator to login 
+ * Administrator login page, this page is for administrator to login
  */
 public class LoginFrame extends KeyFrame {
 
@@ -90,7 +90,7 @@ public class LoginFrame extends KeyFrame {
     }
 
     private void resetAction(ActionEvent e) {
-        adminName.setText("");
+        adminName.setText("admin");
         password.setText("");
     }
 
@@ -98,5 +98,4 @@ public class LoginFrame extends KeyFrame {
         new StartFrame().setVisible(true);
         dispose();
     }
-
 }

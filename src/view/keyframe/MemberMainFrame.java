@@ -12,20 +12,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Member operation page, this frame extends from the KeyFrame and should be able to choose operation as member 
+ * Member operation page, this frame extends from the KeyFrame and should be able to choose operation as member
  */
 public class MemberMainFrame extends KeyFrame {
 
     private final CardLayout cardLayout = new CardLayout();
+    private JButton mainButton, infoButton, logout, quit;
 
-    public MemberMainFrame(String username) {
+    public MemberMainFrame(String account) {
         super("Member Main Frame", 900, 650);
         MemberDAO dao = new MemberDAOImpl();
-        String identity = dao.getIdentityByAccount(username);
-        initFrame(username, identity);
+        String identity = dao.getIdentityByAccount(account);
+        initFrame(account, identity);
     }
 
-    private void initFrame(String username, String identity) {
+    private void initFrame(String account, String identity) {
         JPanel contentPane = new JPanel() {
             public void paintComponent(Graphics g) {
                 super.paintComponent(g);
@@ -39,19 +40,17 @@ public class MemberMainFrame extends KeyFrame {
         contentPane.add(panel);
         panel.setLayout(cardLayout);
 
-        MainPanel main = new MainPanel(username, identity);
+        MainPanel main = new MainPanel(account, identity);
         panel.add(main, "main");
-        PersonalInformation info = new PersonalInformation(username);
+        PersonalInformation info = new PersonalInformation(account);
         panel.add(info, "info");
-        JButton mainButton = new JButton("mainFrame");
-        JButton infoButton = new JButton("personal info");
 
-        if("membership".equals(identity)) {
-            SelectCoursePanel course = new SelectCoursePanel(username);
+        if ("membership".equals(identity)) {
+            SelectCoursePanel course = new SelectCoursePanel(account);
             panel.add(course, "course");
             CoachesInfoPanel coaches = new CoachesInfoPanel();
             panel.add(coaches, "coaches");
-            ClassSchedulePanel schedule = new ClassSchedulePanel();
+            ClassSchedulePanel schedule = new ClassSchedulePanel(account);
             panel.add(schedule, "schedule");
             JButton selectButton = new JButton("select course");
             JButton coachesButton = new JButton("coaches info");
@@ -84,7 +83,7 @@ public class MemberMainFrame extends KeyFrame {
             scheduleButton.setBounds(50, 270, 150, 30);
             contentPane.add(scheduleButton);
         } else {
-            WorkPanel work = new WorkPanel(username);
+            WorkPanel work = new WorkPanel(account);
             panel.add(work, "work");
 
             JButton workButton = new JButton("work info");
@@ -99,9 +98,26 @@ public class MemberMainFrame extends KeyFrame {
             contentPane.add(workButton);
         }
 
-        JButton logout = new JButton("Logging Out");
-        JButton quit = new JButton("Quit Out");
+        setButtonList();
+        setLayOut(panel);
+        contentPane.add(mainButton);
+        contentPane.add(infoButton);
+        contentPane.add(logout);
+        contentPane.add(quit);
+        logout.addActionListener(this::logoutAction);
+        quit.addActionListener(this::quitAction);
 
+        setContentPane(contentPane);
+    }
+
+    private void setButtonList() {
+        mainButton = new JButton("mainFrame");
+        infoButton = new JButton("personal info");
+        logout = new JButton("Logging Out");
+        quit = new JButton("Quit Out");
+    }
+
+    private void setLayOut(JPanel panel) {
         mainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -109,8 +125,6 @@ public class MemberMainFrame extends KeyFrame {
             }
         });
         mainButton.setBounds(50, 70, 150, 30);
-        contentPane.add(mainButton);
-
         infoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -118,16 +132,8 @@ public class MemberMainFrame extends KeyFrame {
             }
         });
         infoButton.setBounds(50, 120, 150, 30);
-        contentPane.add(infoButton);
-
         logout.setBounds(50, 320, 150, 30);
         quit.setBounds(50, 370, 150, 30);
-        contentPane.add(logout);
-        contentPane.add(quit);
-        logout.addActionListener(this::logoutAction);
-        quit.addActionListener(this::quitAction);
-
-        setContentPane(contentPane);
     }
 
     //Log out account

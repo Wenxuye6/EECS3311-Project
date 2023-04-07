@@ -3,15 +3,16 @@ package view.panel.member;
 import bean.Member;
 import dao.MemberDAO;
 import dao.impl.MemberDAOImpl;
+import util.CheckDigitUtil;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 
 /**
-  * Welcome to PersonalInformation class, this class extends from Jpael and should be able to show all user's personal information 
-  */
-
+ * Welcome to PersonalInformation class, this class extends from Jpael and should be able to show all user's personal information
+ */
 public class PersonalInformation extends JPanel {
 
     private JTextField jtf11, jtf12, jtf13, jtf14, jtf15, jtf16, jtf17;
@@ -27,6 +28,7 @@ public class PersonalInformation extends JPanel {
 
     private void initPanel(String account) {
         modify = new JButton("modify");
+        JButton renovate = new JButton("renovate");
         //Membership Information
         //Information column
         Label jl10 = new Label("Info Bar");
@@ -42,11 +44,13 @@ public class PersonalInformation extends JPanel {
         Label jl18 = new Label("Fund:");
         Label jl19 = new Label("identity:");
         jtf11 = new JTextField(); //account
+        jtf11.setEnabled(false);
         jtf12 = new JTextField(); //password
         jtf13 = new JTextField(); //realName
         jtf14 = new JTextField(); //height
         jtf15 = new JTextField(); //weight
         jtf16 = new JTextField(); //BMI
+        jtf16.setEnabled(false);
         jtf17 = new JTextField(); //Fund
         jrb1 = new JRadioButton("male");
         jrb2 = new JRadioButton("female");
@@ -54,10 +58,9 @@ public class PersonalInformation extends JPanel {
         bg.add(jrb1);
         bg.add(jrb2);
         jcb = new JComboBox<>(); //identity
-
-        jtf11.setEnabled(false);
-
+        jcb.setEnabled(false);
         modify.setBounds(450, 380, 120, 30);
+        renovate.setBounds(300, 380, 120, 30);
 
         jl10.setBounds(20, 90, 80, 30);
         jl11.setBounds(20, 130, 40, 30);
@@ -84,6 +87,7 @@ public class PersonalInformation extends JPanel {
         initInfo(account);
 
         add(modify);
+        add(renovate);
         add(jl10);
         add(jl11);
         add(jl12);
@@ -106,8 +110,13 @@ public class PersonalInformation extends JPanel {
         add(jrb2);
 
         modify.addActionListener(this::modifyAction);
+        renovate.addActionListener(e -> renovateAction(account));
     }
 
+    //renovate button
+    private void renovateAction(String account) {
+        initInfo(account);
+    }
 
     //Modify button
     private void modifyAction(ActionEvent e) {
@@ -117,13 +126,22 @@ public class PersonalInformation extends JPanel {
         String realName = jtf13.getText().trim();
         String height = jtf14.getText().trim();
         String weight = jtf15.getText().trim();
-        String BMI = jtf16.getText().trim();
+        //String BMI = jtf16.getText().trim();
         String Fund = jtf17.getText().trim();
         String identity = (String) jcb.getSelectedItem();
-        if ("".equals(password) || "".equals(realName) || "".equals(height) || "".equals(weight) || "".equals(BMI) || "".equals(Fund) || "Please Select……".equals(identity)) {
+        if ("".equals(password) || "".equals(realName) || "".equals(height) || "".equals(weight) || "".equals(Fund) || "Please Select……".equals(identity)) {
             JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
+        if(!CheckDigitUtil.check(height) || !CheckDigitUtil.check(weight) || !CheckDigitUtil.check(Fund)) { //digit
+            JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        double h = Double.parseDouble(height);
+        double w = Double.parseDouble(weight);
+        Double BMI = w / Math.pow(h, 2);
+        String s = String.format("%.2f", BMI);
+
         String gender;
         if (jrb1.isSelected()) {
             gender = "male";
@@ -139,8 +157,9 @@ public class PersonalInformation extends JPanel {
         }
 
         Member newMember = new Member(member.getMemberId(), account, password, realName, gender, Double.parseDouble(height),
-                Double.parseDouble(weight), Double.parseDouble(BMI), Double.parseDouble(Fund), identity);
+                Double.parseDouble(weight), Double.parseDouble(s), Double.parseDouble(Fund), identity);
         memberDAO.change(newMember);
+        jtf16.setText(s);
         JOptionPane.showMessageDialog(null, "Modified successfully!");
     }
 

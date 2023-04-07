@@ -1,13 +1,18 @@
 package dao;
 
 import bean.Course;
+
+import java.util.List;
+
 /**
- * User;s CourseDao interface
+ * Users CourseDao interface
  */
 public interface CourseDAO {
 
-    //link to databse 
+    //link to databse
     Object[][] getCourseArrayList();
+
+    List<Course> getCourseList();
 
     //display attributes
     Course getCourseById(int id);

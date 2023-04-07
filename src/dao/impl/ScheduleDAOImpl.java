@@ -5,10 +5,23 @@ import dao.BaseDAO;
 import dao.ScheduleDAO;
 
 import java.util.List;
+
 /**
-  * Welcome to ScheduleDaoImpl class, this class extends BaseDao and it will show all the imformation about the course shedule
-  */
+ * Welcome to ScheduleDaoImpl class, this class extends BaseDao and it will show all the imformation about the course shedule
+ */
 public class ScheduleDAOImpl extends BaseDAO<Schedule> implements ScheduleDAO {
+    @Override
+    public Object[][] getOwnScheduleArrayList(String memberName) {
+        String sql = "select * from t_schedule where `memberName`=?";
+        List<Object[]> l = getArrayList(sql, memberName);
+        Object[][] list = new Object[l.size()][4];
+        int i = 0;
+        for (Object[] o : l) {
+            list[i++] = o;
+        }
+        return list;
+    }
+
     @Override
     public Object[][] getScheduleArrayList() {
         String sql = "select * from t_schedule";
@@ -19,6 +32,12 @@ public class ScheduleDAOImpl extends BaseDAO<Schedule> implements ScheduleDAO {
             list[i++] = o;
         }
         return list;
+    }
+
+    @Override
+    public List<Schedule> getScheduleList() {
+        String sql = "select * from t_schedule";
+        return getBeanList(sql);
     }
 
     @Override
@@ -61,5 +80,11 @@ public class ScheduleDAOImpl extends BaseDAO<Schedule> implements ScheduleDAO {
     public boolean memberExist(String memberName) {
         String sql = "select * from `t_schedule` where `memberName`=?";
         return getBeanList(sql, memberName).size() > 0;
+    }
+
+    @Override
+    public boolean courseExist(String memberName, String courseName) {
+        String sql = "select * from `t_schedule` where `memberName`=? and `courseName`=?";
+        return getBeanList(sql, memberName, courseName).size() > 0;
     }
 }

@@ -31,7 +31,6 @@ public class RegisterFrame extends MinorFrame {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(null);
 
-        //fields for input when registeration
         JLabel jl1 = new JLabel("Account");
         JLabel jl2 = new JLabel("Password");
         JLabel jl3 = new JLabel("RePassword");
@@ -120,11 +119,11 @@ public class RegisterFrame extends MinorFrame {
 
     //Register button
     private void registerAction(ActionEvent e) {
-        String username = jtf.getText().trim();
+        String account = jtf.getText().trim();
         String password1 = String.valueOf(jpf1.getPassword()).trim();
         String password2 = String.valueOf(jpf2.getPassword()).trim();
         String identity = (String)jcb.getSelectedItem();
-        if ("".equals(username)) {
+        if ("".equals(account)) {
             JOptionPane.showMessageDialog(null, "uncorrect account!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
@@ -151,7 +150,7 @@ public class RegisterFrame extends MinorFrame {
             return;
         }
 
-        Member member = new Member(0, username, password1, "unknown", "unknown", 0.0, 0.0, 0.0, 0.0, identity);
+        Member member = new Member(0, account, password1, "unknown", "unknown", 0.0, 0.0, 0.0, 0.0, identity);
 
         boolean isSuccess = memberDAO.addMember(member);
         if (isSuccess) {

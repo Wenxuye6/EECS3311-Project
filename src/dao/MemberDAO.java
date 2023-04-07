@@ -2,6 +2,8 @@ package dao;
 
 import bean.Member;
 
+import java.util.List;
+
 /**
  * User operating interface
  */
@@ -24,9 +26,15 @@ public interface MemberDAO {
 
     Object[][] getUserArrayList();
 
+    List<Member> getMemberList();
+
     Object[][] getCoachArrayList();
 
     Member getMemberByAccount(String account);
+
+    void updateFund(String account, String Fund);
+
+    Double getFundByAccount(String account);
 
     boolean isExists(String username);
 }

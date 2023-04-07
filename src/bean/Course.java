@@ -10,7 +10,7 @@ public class Course {
     //No-Arg Constructor.
     public Course() {
     }
-    
+
     //Parameterized Constructor.
     public Course(Integer courseId, String courseName, Double price, String benefit) {
         this.courseId = courseId;
@@ -18,6 +18,7 @@ public class Course {
         this.price = price;
         this.benefit = benefit;
     }
+
     //getter for ID
     public Integer getCourseId() {
         return courseId;

@@ -3,15 +3,12 @@ package view.minorframe;
 import bean.Course;
 import dao.CourseDAO;
 import dao.impl.CourseDAOImpl;
+import util.CheckDigitUtil;
 import view.baseview.MinorFrame;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-
-/**
- * add new course interface, this class extends from MinorFrame and should be able to add new course to the system
- */
 
 public class AddCourseFrame extends MinorFrame {
 
@@ -24,7 +21,7 @@ public class AddCourseFrame extends MinorFrame {
         initFrame();
     }
 
-    //fields to input when addding a course
+    //fields to input when adding a course
     private void initFrame() {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(null);
@@ -78,6 +75,10 @@ public class AddCourseFrame extends MinorFrame {
         String price = jtf3.getText().trim();
         String benefit = jta.getText().trim();
         if ("".equals(courseName) || "".equals(price)) {
+            JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if(!CheckDigitUtil.check(price)) { //digit
             JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }

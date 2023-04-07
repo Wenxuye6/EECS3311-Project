@@ -5,9 +5,10 @@ import dao.BaseDAO;
 import dao.CourseDAO;
 
 import java.util.List;
+
 /**
-  * Wlcomte to CourseDAOImpl class, this class extends BaseDAO<Course>
-  */
+ * Welcome to CourseDAOImpl class, this class extends BaseDAO<Course>
+ */
 public class CourseDAOImpl extends BaseDAO<Course> implements CourseDAO {
 
     @Override
@@ -20,6 +21,12 @@ public class CourseDAOImpl extends BaseDAO<Course> implements CourseDAO {
             list[i++] = o;
         }
         return list;
+    }
+
+    @Override
+    public List<Course> getCourseList() {
+        String sql = "select * from t_course";
+        return getBeanList(sql);
     }
 
     @Override

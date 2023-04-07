@@ -10,9 +10,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
-  * Welcome to CoachesInfoPanel class, this class extends from Jpael and should be able to show all informations about coaches 
-  */
-
+ * Welcome to CoachesInfoPanel class, this class extends from Jpael and should be able to show all informations about coaches
+ */
 public class CoachesInfoPanel extends JPanel {
 
     private JTable table;
@@ -186,6 +185,7 @@ public class CoachesInfoPanel extends JPanel {
         table.getTableHeader().setReorderingAllowed(false); //Cannot change the position of a column
     }
 
+    //reset button
     private void resetValue() {
         jtf11.setText("");
         jtf12.setText("");

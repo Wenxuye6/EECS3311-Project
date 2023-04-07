@@ -11,7 +11,7 @@ public class Schedule {
     public Schedule() {
     }
 
-    
+
     //constructers
     public Schedule(Integer scheduleId, String memberName, String courseName, String coachName) {
         this.scheduleId = scheduleId;
@@ -24,7 +24,7 @@ public class Schedule {
     public Integer getScheduleId() {
         return scheduleId;
     }
- 
+
     //setters of ID
     public void setScheduleId(Integer scheduleId) {
         this.scheduleId = scheduleId;

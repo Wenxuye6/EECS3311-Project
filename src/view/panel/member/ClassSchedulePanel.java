@@ -1,23 +1,26 @@
 package view.panel.member;
 
 import bean.Schedule;
+import bean.Work;
 import dao.MemberDAO;
 import dao.ScheduleDAO;
+import dao.WorkDAO;
 import dao.impl.MemberDAOImpl;
 import dao.impl.ScheduleDAOImpl;
+import dao.impl.WorkDAOImpl;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
-  * Welcome to ClassSchedulePanel class, this class extends from Jpael and should be able to show the class scheduale 
-  */
-
+ * Welcome to ClassSchedulePanel class, this class extends from Jpael and should be able to show the class scheduale
+ */
 public class ClassSchedulePanel extends JPanel {
 
     private JTable table;
@@ -26,6 +29,7 @@ public class ClassSchedulePanel extends JPanel {
     private JComboBox<String> jcb;
     private final ScheduleDAO scheduleDAO = new ScheduleDAOImpl();
     private final MemberDAO memberDAO = new MemberDAOImpl();
+    private final WorkDAO workDAO = new WorkDAOImpl();
     private JButton modify, renovate, delete;
 
     @Override
@@ -37,13 +41,13 @@ public class ClassSchedulePanel extends JPanel {
         g.drawLine(100, 290, 100, 320);
     }
 
-    public ClassSchedulePanel() {
+    public ClassSchedulePanel(String account) {
         setLayout(null);
-        initPanel();
+        initPanel(account);
     }
 
-    private void initPanel() {
-        initTable();
+    private void initPanel(String account) {
+        initTable(account);
 
         jcb = new JComboBox<>();
         modify = new JButton("modify");
@@ -109,13 +113,13 @@ public class ClassSchedulePanel extends JPanel {
         });
 
         modify.addActionListener(this::modifyAction);
-        renovate.addActionListener(this::renovateAction);
+        renovate.addActionListener(e -> renovateAction(account));
         delete.addActionListener(this::deleteAction);
     }
 
-    //renovate
-    private void renovateAction(ActionEvent e) {
-        Object[][] stu = scheduleDAO.getScheduleArrayList();
+    //renovate button
+    private void renovateAction(String account) {
+        Object[][] stu = scheduleDAO.getOwnScheduleArrayList(account);
         String[] tableHeader = {"ID", "memberName", "courseName", "coachName"};
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.setDataVector(stu, tableHeader);
@@ -139,6 +143,13 @@ public class ClassSchedulePanel extends JPanel {
         int isFlag = JOptionPane.showConfirmDialog(null, "Please confirm");
         if (isFlag > 0) {
             return;
+        }
+
+        //delete coach-work
+        String oldCourseName = (String) table.getValueAt(row, 2);
+        String oldCoachName = (String) table.getValueAt(row, 3);
+        if(!"".equals(oldCoachName)) {
+            workDAO.deleteWorkByName(oldCoachName, oldCourseName);
         }
 
         scheduleDAO.deleteScheduleById((int) table.getValueAt(row, 0));
@@ -180,6 +191,19 @@ public class ClassSchedulePanel extends JPanel {
         Schedule newSchedule = new Schedule(Integer.parseInt(id), memberName, courseName, coachName);
         scheduleDAO.changeSchedule(newSchedule);
 
+        String oldCoachName = (String) table.getValueAt(row, 3);
+
+        //add-coach-work
+        if("".equals(oldCoachName) && !"".equals(coachName)) {
+            workDAO.addWork(new Work(0, coachName, courseName, "coach"));
+        }
+        //remove
+        else if(!"".equals(oldCoachName) && "".equals(coachName)) {
+            workDAO.deleteWorkByName(oldCoachName, courseName);
+        } else {
+            workDAO.changeCoachName(coachName, oldCoachName);
+        }
+
         table.setValueAt(memberName, row, 1);
         table.setValueAt(courseName, row, 2);
         table.setValueAt(coachName, row, 3);
@@ -202,10 +226,10 @@ public class ClassSchedulePanel extends JPanel {
     }
 
     //Initialization Form
-    private void initTable() {
+    private void initTable(String account) {
         //Create a form
         String[] columnNames = {"ID", "memberName", "courseName", "coachName"};
-        Object[][] rowType = scheduleDAO.getScheduleArrayList();
+        Object[][] rowType = scheduleDAO.getOwnScheduleArrayList(account);
         tdm = new DefaultTableModel(rowType, columnNames);
         table = new JTable(tdm) {
             @Override
@@ -226,6 +250,7 @@ public class ClassSchedulePanel extends JPanel {
         table.getTableHeader().setReorderingAllowed(false); //Cannot change the position of a column
     }
 
+    //Drop down menu
     private void fillJcb() {
         jcb.addItem("Please Select……");
         Object[][] coaches = memberDAO.getCoachArrayList();
@@ -234,6 +259,7 @@ public class ClassSchedulePanel extends JPanel {
         }
     }
 
+    //reset button
     private void resetValue() {
         jtf1.setText("");
         jtf2.setText("");

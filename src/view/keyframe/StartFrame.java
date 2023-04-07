@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-//mainpage
+//main page
 /**
  *This class shows main page，this frame extends from KeyFrame.
  */
@@ -23,7 +23,7 @@ public class StartFrame extends KeyFrame {
 
         JLabel labelTitle = new JLabel("GymManageSystem");
         labelTitle.setFont(new Font("", Font.BOLD, 40));
-        JLabel info = new JLabel("This is a simple version, ONLY for Iteration 2");
+        JLabel info = new JLabel("This is a simple version, ONLY for Iteration 3");
         info.setFont(new Font("", Font.PLAIN, 15));
 
         //software should have two different portals of log in
@@ -40,8 +40,6 @@ public class StartFrame extends KeyFrame {
         jpanel.add(info);
         jpanel.add(user);
         jpanel.add(admin);
-
-
         user.addActionListener(this::userAction);
         admin.addActionListener(this::adminAction);
 

@@ -7,22 +7,18 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
-  * Welcome to WrokPanel, this class extends from JPanel. This class should be able to show the penel of work status and some functions like the Jpanel does
-  */
-
+ * Welcome to WrokPanel, this class extends from JPanel. This class should be able to show the penel of work status and some functions like the Jpanel does
+ */
 public class WorkPanel extends JPanel {
 
     private JTable table;
     private DefaultTableModel tdm;
     private JTextField jtf1, jtf2, jtf3;
     private JComboBox<String> jcb;
-    private JButton renovate;
     private final WorkDAO workDAO = new WorkDAOImpl();
 
 
@@ -35,7 +31,7 @@ public class WorkPanel extends JPanel {
         initTable(account);
 
         jcb = new JComboBox<>();
-        renovate = new JButton("renovate");
+        JButton renovate = new JButton("renovate");
         //Course Information
         //Information column
         Label jl10 = new Label("Info Bar");
@@ -86,15 +82,14 @@ public class WorkPanel extends JPanel {
 
         table.addMouseListener(new MouseAdapter() {
             @Override
-            public void mousePressed(MouseEvent e) {
+            public void mouseReleased(MouseEvent e) {
                 MouseReleased();
             }
         });
-
         renovate.addActionListener(e -> renovateAction(account));
     }
 
-    //renovate
+    //renovate button
     private void renovateAction(String account) {
         Object[][] stu = workDAO.getWorkArrayListByName(account);
         String[] tableHeader = {"ID", "memberName", "work", "identity"};

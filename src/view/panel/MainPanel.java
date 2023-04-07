@@ -9,9 +9,9 @@ import java.awt.*;
 public class MainPanel extends JPanel {
 
     //main panel where shows identity
-    public MainPanel(String username, String identity) {
+    public MainPanel(String account, String identity) {
         setLayout(null);
-        Label label = new Label("Welcome ' " + username + " ' to use GymManage System");
+        Label label = new Label("Welcome ' " + account + " ' to use GymManage System");
         Label label1 = new Label("Your identity is ' " + identity + " '");
 
         label.setFont(new Font("", Font.BOLD, 20));
