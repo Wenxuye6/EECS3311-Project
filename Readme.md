@@ -4,6 +4,7 @@ For EECS3311 Project
 This is the instructions for using the program
 
 For Using System:
+
 NOTE: if the first run does not work, close the program and run again
 
 You need have java and mysql on your PC First.
