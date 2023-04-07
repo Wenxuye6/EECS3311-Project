@@ -1,5 +1,5 @@
 package bean;
-
+//fields
 public class Equipment {
     private Integer equipmentId;
     private String equipmentName;
@@ -10,7 +10,7 @@ public class Equipment {
 
     public Equipment() {
     }
-
+ //Parameterized Constructor.
     public Equipment(Integer equipmentId, String equipmentName, Integer currentNum, Integer damagedNum, Double marketPrice, String value) {
         this.equipmentId = equipmentId;
         this.equipmentName = equipmentName;
