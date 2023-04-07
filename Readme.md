@@ -22,6 +22,10 @@ For membership account users can change their personal information, select cours
 For coach, front desk, janitorial we have set up an identical interface where you can change your personal information and view work infomation
 
 
+For Iteartion3 update: 
+
+We have added a manage equipment option on the admin screen.Fixed a few bugs, when a user does not have enough funds, they will be notified that they cannot enroll in a course. Similarly, if a user already has access to a certain course, they will not be able to enroll in that same course again.Reassign all database IDs as a continuous numerical sequence and then add the starting value to the SQL code. This will facilitate easier testing of the database.
+
 FOR CODE：
 
 Also need run gym.sql before test the code, We have saved all the user data in mysql, so not run gym.sql will get an error when you test main.java to create or enter the account 
