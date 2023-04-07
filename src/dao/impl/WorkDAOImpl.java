@@ -23,6 +23,12 @@ public class WorkDAOImpl extends BaseDAO<Work> implements WorkDAO {
     }
 
     @Override
+    public List<Work> getWorkListByName(String account) {
+        String sql = "select * from `t_work` where `memberName`=?";
+        return getBeanList(sql, account);
+    }
+
+    @Override
     public List<Work> getWorkList() {
         String sql = "select * from `t_work`";
         return getBeanList(sql);

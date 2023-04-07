@@ -35,6 +35,12 @@ public class ScheduleDAOImpl extends BaseDAO<Schedule> implements ScheduleDAO {
     }
 
     @Override
+    public List<Schedule> getOwnScheduleList(String memberName) {
+        String sql = "select * from t_schedule where `memberName`=?";
+        return getBeanList(sql, memberName);
+    }
+
+    @Override
     public List<Schedule> getScheduleList() {
         String sql = "select * from t_schedule";
         return getBeanList(sql);
