@@ -11,6 +11,8 @@ public interface ScheduleDAO {
 
     Object[][] getScheduleArrayList();
 
+    List<Schedule> getOwnScheduleList(String memberName);
+
     List<Schedule> getScheduleList();
 
     //display attributes

@@ -9,6 +9,8 @@ public interface WorkDAO {
     //link with database
     Object[][] getWorkArrayListByName(String account);
 
+    List<Work> getWorkListByName(String account);
+
     List<Work> getWorkList();
 
     void changeWorkName(String newName, String workName);
