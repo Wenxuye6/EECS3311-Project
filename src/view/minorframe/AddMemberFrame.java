@@ -139,14 +139,21 @@ public class AddMemberFrame extends MinorFrame {
             JOptionPane.showMessageDialog(null, "Not filled in correctly!", "warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
+        double h = Double.parseDouble(height);
+        double w = Double.parseDouble(weight);
+        double BMI;
+        if (h == 0 || w == 0) { //zero
+            BMI = 0;
+        } else {
+            BMI = w / Math.pow(h, 2);
+        }
+        String s = String.format("%.2f", BMI);
+
         int isFlag = JOptionPane.showConfirmDialog(null, "Please confirm");
         if (isFlag > 0) {
             return;
         }
-        double h = Double.parseDouble(height);
-        double w = Double.parseDouble(weight);
-        Double BMI = w / Math.pow(h, 2);
-        String s = String.format("%.2f", BMI);
+
         Member member = new Member(0, account, pass, realName, gender, Double.parseDouble(height), Double.parseDouble(weight), Double.parseDouble(s), Double.parseDouble(Fund), identity);
         boolean success = memberDAO.addMember(member);
         if(success) {
