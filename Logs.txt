@@ -166,20 +166,27 @@ Sami will continue make Junit tests and fix the missing Junit test that we misse
 2023.4.5
 Developer Tasks in Iteration 3
 
-Retrospective Document  - responsible by Tao Chen
+Retrospective Document  - responsible by Tao Chen 
+time taken: 2hrs
 
 Implementation on iteration 3 user stories - responsible by Wenxu Ye
+time taken: 2hrs
 
 UI and Database - responsible by Zhige Xia
+time taken: 5hrs
 
 Refactor - responsible by Odunfa Temiloluwa 
+time taken: 2hrs
 
 Documentation - responsible by Haocheng Sun
 update wiki 
 update planning document 
 revised architecture diagram
+time taken: 3hrs
 
 Testing  - responsible by Sami Ullah
+time taken: 2hrs
+
 
 2023.4.6
 
